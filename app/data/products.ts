@@ -9,43 +9,53 @@ export type Product = {
 
 export const products: Product[] = [
   {
-    slug: "french-ceramic-vase-1960",
-    name: "אגרטל קרמיקה צרפתי, שנות ה־60",
-    category: "לבית",
-    price: "₪185",
+    slug: "vroomzoom-driving-board-front",
+    name: "לוח נהיגה אינטראקטיבי - חזית",
+    category: "צעצועים לבנים",
+    price: "₪249",
     image:
-      "https://images.unsplash.com/photo-1543168256-418811576931?auto=format&fit=crop&w=900&q=85",
+      "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=900&q=85",
     description:
-      "קרמיקה מקורית עם גוון חם ומרקם עדין. מתאים לפינה בסלון או לשולחן אוכל.",
+      "לוח עץ איכותי עם הגה, כפתורים ומסך משחק - לפיתוח דמיון, קשב וקואורדינציה.",
   },
   {
-    slug: "denim-jacket-80s",
-    name: "ג׳קט ג׳ינס משופשף, אייטיז מקורי",
-    category: "אופנה",
-    price: "₪240",
+    slug: "vroomzoom-driving-board-side",
+    name: "לוח נהיגה אינטראקטיבי - מבט צד",
+    category: "צעצועים לבנים",
+    price: "₪249",
     image:
-      "https://images.unsplash.com/photo-1544022613-e87ca75a784a?auto=format&fit=crop&w=900&q=85",
+      "https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=900&q=85",
     description:
-      "גזרה קלאסית עם אופי, ג׳ינס רך ונוח. פריט וינטג׳ אמיתי עם נוכחות.",
+      "אותו דגם אהוב מזווית צד המדגישה את מבנה העץ והחלקים האינטראקטיביים.",
   },
   {
-    slug: "transistor-radio-japan-1974",
-    name: "רדיו טרנזיסטור עובד, יפן 1974",
-    category: "אספנות",
-    price: "₪320",
+    slug: "vroomzoom-driving-board-back",
+    name: "לוח נהיגה אינטראקטיבי - גב המוצר",
+    category: "צעצועים לבנים",
+    price: "₪249",
     image:
-      "https://images.unsplash.com/photo-1594784052785-1d6a2e0e7a18?auto=format&fit=crop&w=900&q=85",
+      "https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=900&q=85",
     description:
-      "פריט אספנות נדיר שעובד, עם צליל חם ונוכחות של פעם. כולל כבל מקורי.",
+      "תצוגת גב המוצר עם פרטי יצרן ואריזה - מעולה להורים שרוצים לראות הכל לפני קנייה.",
   },
   {
-    slug: "handmade-leather-bag-1979",
-    name: "תיק עור בעבודת יד, תל אביב 1979",
-    category: "אקססוריז",
-    price: "₪210",
+    slug: "war-machine-figure",
+    name: "בובת וור משין - דמות גיבור",
+    category: "צעצועים לבנים",
+    price: "₪119",
     image:
-      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=85",
+      "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&w=900&q=85",
     description:
-      "עור איכותי בגוון עמוק, תפרים חזקים וסטייל ישראלי ישן שלא יוצא מהאופנה.",
+      "דמות אקשן קשיחה ומפורטת בהשראת גיבורי-על. מתאימה למשחק ולתצוגה.",
+  },
+  {
+    slug: "superman-figure",
+    name: "בובת סופרמן קלאסית",
+    category: "צעצועים לבנים",
+    price: "₪99",
+    image:
+      "https://images.unsplash.com/photo-1608889175123-8ee362201f81?auto=format&fit=crop&w=900&q=85",
+    description:
+      "דמות סופרמן עם גלימה אדומה בסגנון קלאסי - מתנה מושלמת לחובבי קומיקס.",
   },
 ];

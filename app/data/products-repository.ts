@@ -1,3 +1,4 @@
+import { unstable_noStore as noStore } from "next/cache";
 import { getSupabaseServerClient } from "../../lib/supabase/server";
 import { products as fallbackProducts, type Product } from "./products";
 
@@ -34,6 +35,8 @@ function mapRowToProduct(row: ProductRow): Product {
 }
 
 export async function getProducts(): Promise<Product[]> {
+  noStore();
+
   if (!hasSupabaseEnv()) {
     return fallbackProducts;
   }
@@ -59,6 +62,8 @@ export async function getProducts(): Promise<Product[]> {
 }
 
 export async function getProductBySlug(slug: string): Promise<Product | null> {
+  noStore();
+
   if (!hasSupabaseEnv()) {
     return fallbackProducts.find((product) => product.slug === slug) ?? null;
   }

@@ -17,6 +17,8 @@ export function SiteFooter() {
           <Link href="/delivery">משלוחים והחזרות</Link>
           <Link href="/who-we-are">מי אנחנו</Link>
           <Link href="/products">מוצרים</Link>
+          <Link href="/favorites">מועדפים</Link>
+          <Link href="/cart">סל קניות</Link>
         </div>
       </section>
 

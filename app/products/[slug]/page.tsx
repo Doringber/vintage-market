@@ -1,3 +1,5 @@
+import { AddToCartButton } from "../../components/add-to-cart-button";
+import { FavoriteButton } from "../../components/favorite-button";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProductBySlug } from "../../data/products-repository";
@@ -21,11 +23,14 @@ export default async function ProductPage({ params }: ProductPageProps) {
       </Link>
 
       <section className="productLayout">
-        <div
-          className="productImage"
-          style={{ backgroundImage: `url(${product.image})` }}
-          aria-label={`תמונה של ${product.name}`}
-        />
+        <div className="imageLayer">
+          <div
+            className="productImage"
+            style={{ backgroundImage: `url(${product.image})` }}
+            aria-label={`תמונה של ${product.name}`}
+          />
+          <FavoriteButton className="heart" slug={product.slug} name={product.name} />
+        </div>
 
         <article className="productContent">
           <p className="eyebrow">{product.category}</p>
@@ -33,9 +38,16 @@ export default async function ProductPage({ params }: ProductPageProps) {
           <strong className="productPrice">{product.price}</strong>
           <p className="productDescription">{product.description}</p>
           <div className="heroButtons">
-            <button className="button" type="button">
-              הוספה לסל
-            </button>
+            <AddToCartButton
+              className="button"
+              product={{
+                slug: product.slug,
+                name: product.name,
+                price: product.price,
+                image: product.image,
+                category: product.category,
+              }}
+            />
             <Link className="button buttonSecondary" href="/delivery">
               מידע על משלוחים
             </Link>

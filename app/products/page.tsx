@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { AddToCartButton } from "../components/add-to-cart-button";
+import { FavoriteButton } from "../components/favorite-button";
 import { getProducts } from "../data/products-repository";
 
 export default async function ProductsPage() {
@@ -14,19 +16,34 @@ export default async function ProductsPage() {
       <section className="shopGrid">
         {products.map((product) => (
           <article className="shopCard" key={product.slug}>
-            <Link
-              className="shopImage"
-              href={`/products/${product.slug}`}
-              style={{ backgroundImage: `url(${product.image})` }}
-              aria-label={`מעבר לפריט: ${product.name}`}
-            />
+            <div className="imageLayer">
+              <Link
+                className="shopImage"
+                href={`/products/${product.slug}`}
+                style={{ backgroundImage: `url(${product.image})` }}
+                aria-label={`מעבר לפריט: ${product.name}`}
+              />
+              <FavoriteButton className="heart" slug={product.slug} name={product.name} />
+            </div>
             <div className="shopMeta">
               <span>{product.category}</span>
               <h2>
                 <Link href={`/products/${product.slug}`}>{product.name}</Link>
               </h2>
               <p>{product.description}</p>
-              <strong>{product.price}</strong>
+              <div className="metaActions">
+                <strong>{product.price}</strong>
+                <AddToCartButton
+                  className="button miniButton"
+                  product={{
+                    slug: product.slug,
+                    name: product.name,
+                    price: product.price,
+                    image: product.image,
+                    category: product.category,
+                  }}
+                />
+              </div>
             </div>
           </article>
         ))}

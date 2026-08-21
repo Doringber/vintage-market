@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { AddToCartButton } from "./components/add-to-cart-button";
+import { FavoriteButton } from "./components/favorite-button";
 import { getProducts } from "./data/products-repository";
 
 export default async function Home() {
@@ -41,15 +43,14 @@ export default async function Home() {
       <section className="grid">
         {products.map((product, index) => (
           <article className={`card card-${index}`} key={product.name}>
-            <Link
-              className="imageWrap"
-              href={`/products/${product.slug}`}
-              style={{ backgroundImage: `url(${product.image})` }}
-            >
-              <span className="heart" aria-label={`הוספה למועדפים: ${product.name}`}>
-                ♡
-              </span>
-            </Link>
+            <div className="imageLayer">
+              <Link
+                className="imageWrap"
+                href={`/products/${product.slug}`}
+                style={{ backgroundImage: `url(${product.image})` }}
+              />
+              <FavoriteButton className="heart" slug={product.slug} name={product.name} />
+            </div>
             <div className="cardMeta">
               <div>
                 <span>{product.category}</span>
@@ -58,7 +59,19 @@ export default async function Home() {
                 </h3>
                 <p>{product.description}</p>
               </div>
-              <strong>{product.price}</strong>
+              <div className="metaActions">
+                <strong>{product.price}</strong>
+                <AddToCartButton
+                  className="button miniButton"
+                  product={{
+                    slug: product.slug,
+                    name: product.name,
+                    price: product.price,
+                    image: product.image,
+                    category: product.category,
+                  }}
+                />
+              </div>
             </div>
           </article>
         ))}

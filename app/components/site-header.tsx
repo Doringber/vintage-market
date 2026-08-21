@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { navigationLinks } from "../data/navigation";
+import { HeaderActions } from "./header-actions";
+import { primaryNavigationLinks } from "../data/navigation";
 
 export function SiteHeader() {
   return (
@@ -11,24 +12,14 @@ export function SiteHeader() {
         </Link>
 
         <nav className="mainNav" aria-label="ניווט ראשי">
-          {navigationLinks.map((link) => (
+          {primaryNavigationLinks.map((link) => (
             <Link key={link.href} href={link.href}>
               {link.label}
             </Link>
           ))}
         </nav>
 
-        <div className="actions">
-          <button type="button" aria-label="חיפוש">
-            חיפוש
-          </button>
-          <button type="button" aria-label="סל קניות">
-            סל (0)
-          </button>
-          <Link className="button navCta" href="/shop">
-            לקנייה
-          </Link>
-        </div>
+        <HeaderActions />
       </div>
     </header>
   );
