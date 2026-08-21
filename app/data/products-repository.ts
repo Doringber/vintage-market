@@ -16,6 +16,14 @@ type ProductRow = {
 const fallbackImage =
   "https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=1400&q=90";
 
+function resolveProductImage(row: ProductRow): string {
+  if (row.image_url?.trim()) {
+    return row.image_url.trim();
+  }
+
+  return fallbackImage;
+}
+
 function hasSupabaseEnv(): boolean {
   return Boolean(
     process.env.NEXT_PUBLIC_SUPABASE_URL &&
@@ -29,7 +37,7 @@ function mapRowToProduct(row: ProductRow): Product {
     name: row.name,
     category: row.category,
     price: `₪${row.price}`,
-    image: row.image_url ?? fallbackImage,
+    image: resolveProductImage(row),
     description: row.description ?? "פריט וינטג׳ מיוחד שנבחר בקפידה.",
   };
 }
