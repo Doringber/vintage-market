@@ -6,16 +6,24 @@ export function CatalogStatusNote() {
   if (status.backend === "remote") {
     return (
       <section className="contentBox adminStatus">
-        <h2>עריכה מרחוק פעילה</h2>
+        <h2>הניהול מחובר לקטלוג</h2>
         <p>
-          המוצרים נשמרים בענן. אחרי שהאתר חי, נכנסים מכל מכשיר עם אותה סיסמה
-          לכתובת{" "}
-          {status.siteAdminUrl ? (
-            <code>{status.siteAdminUrl}</code>
-          ) : (
-            <code>https://הדומיין-שלך/admin</code>
-          )}
-          .
+          החנות כבר קוראת מ-Supabase. מפתח הכתיבה גם מוגדר, אז שמירת מוצרים
+          מהאדמין מתעדכנת בחנות לכולם.
+        </p>
+      </section>
+    );
+  }
+
+  if (status.hasSupabaseRead && !status.hasServiceRole) {
+    return (
+      <section className="contentBox adminStatus">
+        <h2>החנות מחוברת, הניהול עדיין לא יכול לשמור</h2>
+        <p>
+          המפתחות הציבוריים כבר עובדים: הקונים רואים מוצרים מ-Supabase. זה
+          חיבור לקריאה בלבד. כדי שהאדמין יוכל להוסיף ולערוך מוצרים צריך מפתח
+          כתיבה נפרד, <code>SUPABASE_SERVICE_ROLE_KEY</code>, מ-Supabase →
+          Settings → API. בלי זה השמירה מהאתר החי לא תחזיק.
         </p>
       </section>
     );
@@ -26,10 +34,8 @@ export function CatalogStatusNote() {
       <section className="contentBox adminStatus">
         <h2>אי אפשר לשמור כאן מוצרים</h2>
         <p>
-          האתר רץ על שרת בלי דיסק קבוע. הוסיפו ב-Vercel את{" "}
-          <code>NEXT_PUBLIC_SUPABASE_URL</code>,{" "}
-          <code>NEXT_PUBLIC_SUPABASE_ANON_KEY</code> ו-
-          <code>SUPABASE_SERVICE_ROLE_KEY</code> ואז אפשר לערוך מהטלפון.
+          האתר החי בלי דיסק קבוע. חברו את Supabase ב-Vercel, כולל מפתח הכתיבה
+          לניהול, ואז אפשר לערוך מהטלפון.
         </p>
       </section>
     );
@@ -39,9 +45,8 @@ export function CatalogStatusNote() {
     <section className="contentBox adminStatus">
       <h2>שמירה מקומית בלבד</h2>
       <p>
-        עכשיו המוצרים נשמרים במחשב הזה. כדי לערוך מרחוק אחרי הפריסה: פתחו פרויקט
-        חינמי ב-Supabase, הריצו את <code>supabase/products.sql</code>, והדביקו את
-        המפתחות ב-Vercel יחד עם <code>ADMIN_PASSWORD</code>.
+        עכשיו המוצרים נשמרים במחשב הזה. באתר החי צריך גם מפתח כתיבה ל-Supabase
+        כדי שהאדמין ישמור לענן.
       </p>
     </section>
   );

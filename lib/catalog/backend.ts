@@ -4,7 +4,9 @@ export type CatalogStatus = {
   backend: CatalogBackend;
   hasAdminPassword: boolean;
   hasSupabaseUrl: boolean;
+  hasAnonKey: boolean;
   hasServiceRole: boolean;
+  hasSupabaseRead: boolean;
   siteAdminUrl: string | null;
 };
 
@@ -46,11 +48,15 @@ export function getSiteAdminUrl(): string | null {
 }
 
 export function getCatalogStatus(): CatalogStatus {
+  const supabaseUrl = hasSupabaseUrl();
+  const anonKey = hasSupabaseAnonKey();
   return {
     backend: getCatalogBackend(),
     hasAdminPassword: Boolean(process.env.ADMIN_PASSWORD?.trim()),
-    hasSupabaseUrl: hasSupabaseUrl(),
+    hasSupabaseUrl: supabaseUrl,
+    hasAnonKey: anonKey,
     hasServiceRole: hasSupabaseServiceRole(),
+    hasSupabaseRead: supabaseUrl && anonKey,
     siteAdminUrl: getSiteAdminUrl(),
   };
 }
