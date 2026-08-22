@@ -65,6 +65,9 @@ from a phone or another computer:
 4. Redeploy
 5. Open `https://YOUR_DOMAIN/admin`, sign in, and save products
 
+The public Supabase URL and anon key only let the shop *read* products.
+Admin saves need `SUPABASE_SERVICE_ROLE_KEY` (server-only write key).
+
 Products and uploaded images are stored in Supabase, so they survive deploys.
 On a laptop without Supabase, edits still save to `data/catalog.json`.
 
