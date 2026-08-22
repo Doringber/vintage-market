@@ -46,7 +46,7 @@ export function MobileNav() {
         aria-controls="mobile-menu"
         onClick={() => setOpen((current) => !current)}
       >
-        {open ? "סגירה" : "תפריט"}
+        <span className="menuToggleText">{open ? "סגירה" : "תפריט"}</span>
       </button>
 
       {open ? (

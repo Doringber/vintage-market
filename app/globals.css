@@ -283,6 +283,7 @@ h3,
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 4px;
   min-height: 44px;
   border: 2px solid var(--charcoal);
   border-radius: var(--border-quirky);
@@ -290,6 +291,10 @@ h3,
   padding: 8px 12px;
   font-size: 14px;
   white-space: nowrap;
+}
+
+.actionLabelShort {
+  display: none;
 }
 
 .actionLink:hover {
@@ -1107,6 +1112,33 @@ a:focus-visible {
 }
 
 @media (max-width: 640px) {
+  .header {
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "menu tools"
+      "brand brand"
+      "search search";
+  }
+
+  .brand {
+    justify-self: stretch;
+    text-align: start;
+    font-size: 22px;
+  }
+
+  .actionLabelFull {
+    display: none;
+  }
+
+  .actionLabelShort {
+    display: inline;
+  }
+
+  .menuToggle {
+    padding-inline: 10px;
+    font-size: 14px;
+  }
+
   body {
     font-size: 16px;
   }

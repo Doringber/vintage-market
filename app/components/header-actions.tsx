@@ -13,7 +13,11 @@ export function HeaderActions() {
         href="/favorites"
         aria-label={`מועדפים, ${favoriteCount} פריטים`}
       >
-        מועדפים {favoriteCount}
+        <span className="actionLabelFull">מועדפים</span>
+        <span className="actionLabelShort" aria-hidden="true">
+          ♡
+        </span>
+        <span>{favoriteCount}</span>
       </Link>
 
       <Link
@@ -21,7 +25,11 @@ export function HeaderActions() {
         href="/cart"
         aria-label={`סל קניות, ${cartCount} פריטים`}
       >
-        סל {cartCount}
+        <span className="actionLabelFull">סל</span>
+        <span className="actionLabelShort" aria-hidden="true">
+          סל
+        </span>
+        <span>{cartCount}</span>
       </Link>
     </div>
   );
