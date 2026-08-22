@@ -872,6 +872,33 @@ a:focus-visible {
   color: var(--accent-teal);
 }
 
+.checkoutActions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.checkoutHint,
+.checkoutError {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.checkoutHint {
+  color: var(--muted-text-color);
+}
+
+.checkoutError {
+  color: #8a1f1f;
+  font-weight: 700;
+}
+
+.checkoutActions .button:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
 .menuToggle,
 .navBackdrop,
 .mobileMenu {
