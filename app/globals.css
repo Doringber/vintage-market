@@ -744,6 +744,21 @@ a:focus-visible {
   min-height: 560px;
 }
 
+.productThumbs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.productThumb {
+  min-height: 72px;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid var(--charcoal);
+  border-radius: 12px;
+}
+
 .productContent h1 {
   margin: 0 0 12px;
   font-size: clamp(32px, 4vw, 52px);
@@ -1306,6 +1321,81 @@ a:focus-visible {
 
   .statement p {
     font-size: clamp(28px, 9vw, 48px);
+  }
+}
+
+.adminForm {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 640px;
+}
+
+.adminForm textarea {
+  border: 2px solid var(--charcoal);
+  border-radius: var(--border-quirky);
+  padding: 10px 12px;
+  font: inherit;
+  min-height: 140px;
+}
+
+.adminFieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 2px dashed rgba(43, 43, 43, 0.28);
+  border-radius: var(--border-quirky);
+  padding: 14px;
+}
+
+.adminFieldset input[type="url"] {
+  border: 2px solid var(--charcoal);
+  border-radius: var(--border-quirky);
+  padding: 10px 12px;
+  font-size: 16px;
+}
+
+.adminPreview,
+.adminThumb {
+  background-size: cover;
+  background-position: center;
+  border: 2px solid var(--charcoal);
+  border-radius: var(--border-quirky);
+}
+
+.adminPreview {
+  min-height: 220px;
+}
+
+.adminList {
+  display: grid;
+  gap: 14px;
+}
+
+.adminRow {
+  display: grid;
+  grid-template-columns: 96px 1fr auto;
+  gap: 14px;
+  align-items: center;
+  padding: 10px;
+}
+
+.adminThumb {
+  min-height: 84px;
+}
+
+.adminRow h2 {
+  margin: 0 0 6px;
+  font-size: 22px;
+}
+
+.adminRow p {
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .adminRow {
+    grid-template-columns: 1fr;
   }
 }
 

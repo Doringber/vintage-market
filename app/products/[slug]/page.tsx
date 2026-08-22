@@ -30,6 +30,18 @@ export default async function ProductPage({ params }: ProductPageProps) {
             aria-label={`תמונה של ${product.name}`}
           />
           <FavoriteButton className="heart" slug={product.slug} name={product.name} />
+          {product.images && product.images.length > 0 ? (
+            <div className="productThumbs">
+              {[product.image, ...product.images].map((image) => (
+                <div
+                  key={image}
+                  className="productThumb"
+                  style={{ backgroundImage: `url(${image})` }}
+                  aria-label={`תמונה נוספת של ${product.name}`}
+                />
+              ))}
+            </div>
+          ) : null}
         </div>
 
         <article className="productContent">

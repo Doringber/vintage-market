@@ -1,4 +1,5 @@
 import { unstable_noStore as noStore } from "next/cache";
+import { readCatalogFile } from "../../lib/catalog/store";
 import { getSupabaseServerClient } from "../../lib/supabase/server";
 import { products as fallbackProducts, type Product } from "./products";
 
@@ -45,6 +46,25 @@ function mapRowToProduct(row: ProductRow): Product {
 export async function getProducts(): Promise<Product[]> {
   noStore();
 
+  try {
+    const catalog = await readCatalogFile();
+    if (catalog) {
+      return catalog
+        .filter((product) => product.isActive && product.stock > 0)
+        .map((product) => ({
+          slug: product.slug,
+          name: product.name,
+          category: product.category,
+          price: `₪${product.price}`,
+          image: product.image || fallbackImage,
+          images: product.images,
+          description: product.description,
+        }));
+    }
+  } catch (error) {
+    console.error("Failed to load local catalog.", error);
+  }
+
   if (!hasSupabaseEnv()) {
     return fallbackProducts;
   }
@@ -71,6 +91,26 @@ export async function getProducts(): Promise<Product[]> {
 
 export async function getProductBySlug(slug: string): Promise<Product | null> {
   noStore();
+
+  try {
+    const catalog = await readCatalogFile();
+    const product = catalog?.find(
+      (item) => item.slug === slug && item.isActive && item.stock > 0,
+    );
+    if (product) {
+      return {
+        slug: product.slug,
+        name: product.name,
+        category: product.category,
+        price: `₪${product.price}`,
+        image: product.image || fallbackImage,
+        images: product.images,
+        description: product.description,
+      };
+    }
+  } catch (error) {
+    console.error("Failed to load local catalog product.", error);
+  }
 
   if (!hasSupabaseEnv()) {
     return fallbackProducts.find((product) => product.slug === slug) ?? null;

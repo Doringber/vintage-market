@@ -39,6 +39,18 @@ Supabase clients are ready in:
 - `lib/supabase/client.ts` (browser/client usage)
 - `lib/supabase/server.ts` (server components and routes)
 
+## Admin products
+
+Open http://localhost:3000/admin
+
+1. Add `ADMIN_PASSWORD` to `.env.local` and restart
+2. Log in and edit product titles, info, prices, and images
+3. Upload image files or paste image URLs
+4. Hidden / zero-stock products stay out of the storefront
+
+Edits are saved to `data/catalog.json`. If `SUPABASE_SERVICE_ROLE_KEY` is set,
+they are also upserted into the `products` table.
+
 ## Bit / PayBox transfer
 
 The cart can reveal a Bit/PayBox phone number only after the buyer fills a
