@@ -61,6 +61,7 @@ from a phone or another computer:
    - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
    - `SUPABASE_SERVICE_ROLE_KEY`
    - `NEXT_PUBLIC_SITE_URL` (`https://YOUR_DOMAIN`)
+   - `BIT_PAYBOX_PHONE` (seller Bit / PayBox mobile, never in client code)
 4. Redeploy
 5. Open `https://YOUR_DOMAIN/admin`, sign in, and save products
 
@@ -71,7 +72,9 @@ On a laptop without Supabase, edits still save to `data/catalog.json`.
 
 The cart can reveal a Bit/PayBox phone number only after the buyer fills a
 name, an Israeli mobile number, and confirms they intend to pay now. The
-number is stored in `BIT_PAYBOX_PHONE` and never rendered on public pages.
+seller number is read from `BIT_PAYBOX_PHONE` on the server and never
+rendered on public pages. Set it in `.env.local` locally and in Vercel for
+the live site, then restart / redeploy.
 
 ## Stripe checkout
 

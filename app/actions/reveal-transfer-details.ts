@@ -68,7 +68,8 @@ export async function revealTransferDetails(
   if (!phoneDigits) {
     return {
       ok: false,
-      error: "תשלום בביט / PayBox עדיין לא הוגדר. צריך להוסיף BIT_PAYBOX_PHONE ל-.env.local.",
+      error:
+        "תשלום בביט / PayBox עדיין לא הוגדר. הוסיפו BIT_PAYBOX_PHONE ב-Vercel או ב-.env.local.",
     };
   }
 
