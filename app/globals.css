@@ -8,8 +8,8 @@
   --title-color: #8e6b9e;
   --text-color: #2b2b2b;
   --muted-text-color: #4a4a4a;
-  --font-display: var(--font-display), "Frank Ruhl Libre", "Times New Roman", serif;
-  --font-body: var(--font-body), "Assistant", Arial, sans-serif;
+  --font-display: var(--font-display), "Playpen Sans Hebrew", "Comic Sans MS", sans-serif;
+  --font-body: var(--font-body), Fredoka, "Varela Round", Arial, sans-serif;
   --border-quirky: 24px 12px 24px 12px;
   --hard-shadow: 5px 5px 0px var(--charcoal);
   --max: 1380px;
@@ -86,7 +86,7 @@ h2,
 h3,
 .brand {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 800;
   color: var(--title-color);
 }
 
@@ -194,9 +194,10 @@ h3,
   display: inline-flex;
   flex-direction: column;
   gap: 2px;
-  font-size: 24px;
+  font-size: 26px;
+  line-height: 0.95;
   color: var(--title-color);
-  letter-spacing: -0.2px;
+  letter-spacing: -0.04em;
 }
 
 .brandTag {
@@ -326,8 +327,8 @@ h3,
 
 h1 {
   font-size: clamp(58px, 8vw, 120px);
-  line-height: 0.92;
-  letter-spacing: -0.25px;
+  line-height: 0.86;
+  letter-spacing: -0.045em;
   margin: 0 0 28px;
   color: var(--title-color);
 }
@@ -444,7 +445,8 @@ a:focus-visible {
 .shopHeader h1,
 .contentPage h1 {
   font-size: clamp(38px, 5vw, 64px);
-  letter-spacing: -0.2px;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
   margin: 0;
   color: var(--title-color);
 }
@@ -557,7 +559,9 @@ a:focus-visible {
 
 .cardMeta h3 {
   margin: 6px 0 0;
-  font-size: 21px;
+  font-size: 22px;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
 }
 
 .cardMeta p {
@@ -587,7 +591,9 @@ a:focus-visible {
 .statement p {
   font-family: var(--font-display);
   font-size: clamp(42px, 6vw, 86px);
-  line-height: 1.05;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  font-weight: 800;
   margin: 0;
 }
 
@@ -762,6 +768,8 @@ a:focus-visible {
 .productContent h1 {
   margin: 0 0 12px;
   font-size: clamp(32px, 4vw, 52px);
+  letter-spacing: -0.04em;
+  line-height: 0.95;
 }
 
 .productPrice {
