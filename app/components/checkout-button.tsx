@@ -27,17 +27,13 @@ export function CheckoutButton() {
   return (
     <div className="checkoutActions">
       <button
-        className="button"
+        className="buttonSecondary actionLink"
         type="button"
         onClick={handleCheckout}
         disabled={pending || cart.length === 0}
       >
-        {pending ? "פותחים תשלום..." : "לתשלום מאובטח ב-Stripe"}
+        {pending ? "פותחים תשלום..." : "או תשלום בכרטיס דרך Stripe"}
       </button>
-      <p className="checkoutHint">
-        כרטיס האשראי מוזן אצל Stripe, לא אצלנו. אפשר לבדוק עם כרטיס בדיקה
-        4242.
-      </p>
       {error ? <p className="checkoutError">{error}</p> : null}
     </div>
   );

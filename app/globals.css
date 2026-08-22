@@ -899,6 +899,69 @@ a:focus-visible {
   cursor: wait;
 }
 
+.transferForm,
+.transferReveal {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.transferField {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.transferField input,
+.transferCheck input {
+  font: inherit;
+}
+
+.transferField input {
+  border: 2px solid var(--charcoal);
+  border-radius: var(--border-quirky);
+  padding: 10px 12px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.transferCheck {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.transferHoney {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.transferReveal {
+  padding: 12px;
+  border: 2px dashed rgba(43, 43, 43, 0.35);
+  border-radius: var(--border-quirky);
+  background: #fff;
+}
+
+.transferReveal h3,
+.transferReveal p {
+  margin: 0;
+}
+
+.transferPhone {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--accent-teal);
+  letter-spacing: 0.4px;
+}
+
 .menuToggle,
 .navBackdrop,
 .mobileMenu {

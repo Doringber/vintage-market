@@ -39,6 +39,12 @@ Supabase clients are ready in:
 - `lib/supabase/client.ts` (browser/client usage)
 - `lib/supabase/server.ts` (server components and routes)
 
+## Bit / PayBox transfer
+
+The cart can reveal a Bit/PayBox phone number only after the buyer fills a
+name, an Israeli mobile number, and confirms they intend to pay now. The
+number is stored in `BIT_PAYBOX_PHONE` and never rendered on public pages.
+
 ## Stripe checkout
 
 The cart "לתשלום מאובטח" button creates a Stripe Checkout Session on the server

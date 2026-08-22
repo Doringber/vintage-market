@@ -5,7 +5,10 @@ export default function CartPage() {
     <main className="shopPage">
       <header className="shopHeader">
         <h1>סל הקניות</h1>
-        <p>כאן אפשר לעדכן כמויות, להסיר פריטים ולהמשיך לתשלום.</p>
+        <p>
+          כאן אפשר לעדכן כמויות, להסיר פריטים ולשלם בביט או PayBox. מספר
+          התשלום מוצג רק אחרי אישור קנייה.
+        </p>
       </header>
       <CartView />
     </main>
