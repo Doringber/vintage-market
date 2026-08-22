@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SearchForm } from "../components/search-form";
 import { getProducts } from "../data/products-repository";
 
 type SearchPageProps = {
@@ -24,8 +25,9 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
         <p>
           {query
             ? `נמצאו ${results.length} תוצאות עבור "${query}".`
-            : "הקלידי מונח חיפוש בשורת החיפוש למעלה."}
+            : "חפשי בגדים, מציאות או כל דבר אחר שיש בחנות."}
         </p>
+        <SearchForm defaultQuery={query} inputId="search-page-q" />
       </header>
 
       {query && results.length === 0 ? (

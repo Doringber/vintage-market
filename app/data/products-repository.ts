@@ -14,7 +14,7 @@ type ProductRow = {
 };
 
 const fallbackImage =
-  "https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=1400&q=90";
+  "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=1400&q=90";
 
 function resolveProductImage(row: ProductRow): string {
   if (row.image_url?.trim()) {
@@ -38,7 +38,7 @@ function mapRowToProduct(row: ProductRow): Product {
     category: row.category,
     price: `₪${row.price}`,
     image: resolveProductImage(row),
-    description: row.description ?? "פריט וינטג׳ מיוחד שנבחר בקפידה.",
+    description: row.description ?? "פריט יד שנייה לילדים.",
   };
 }
 

@@ -10,7 +10,7 @@ export default async function ProductsPage() {
     <main className="shopPage">
       <header className="shopHeader">
         <h1>כל המוצרים</h1>
-        <p>עמוד המוצרים המרכזי של חנות קטנה ומטריפה.</p>
+        <p>דברי ילדים יד שנייה - בגדים, מציאות ושאר דברים במחיר שפוי.</p>
       </header>
 
       <section className="shopGrid">

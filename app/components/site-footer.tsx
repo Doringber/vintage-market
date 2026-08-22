@@ -6,7 +6,8 @@ export function SiteFooter() {
       <section>
         <div className="brand">חנות קטנה ומטריפה</div>
         <p className="footerText">
-          פריטי וינטג׳ מיוחדים עם אופי, סיפור ואהבה לעיצוב ישראלי.
+          חנות יד שנייה מגניבה לילדים - בגדים, מציאות ושאר דברים במחירים
+          שפויים.
         </p>
       </section>
 
@@ -24,13 +25,16 @@ export function SiteFooter() {
 
       <section>
         <h3>בואו לעקוב</h3>
-        <p className="footerText">כל הפריטים החדשים עולים קודם באינסטגרם.</p>
+        <p className="footerText">המציאות החדשות עולות קודם באינסטגרם.</p>
         <Link className="button buttonSecondary" href="/instagram">
           לעמוד אינסטגרם
         </Link>
       </section>
 
-      <small>© 2026 חנות קטנה ומטריפה - כל הזכויות שמורות</small>
+      <small>
+        הפריטים נמכרים כפי שהם. אנחנו לא מבטיחים בדיקה, אישור וינטג׳ או
+        מצב מסוים. © 2026 חנות קטנה ומטריפה
+      </small>
     </footer>
   );
 }

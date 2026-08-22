@@ -1,27 +1,33 @@
-import type { Metadata } from "next";
-import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Assistant, Frank_Ruhl_Libre } from "next/font/google";
 import { SiteFooter } from "./components/site-footer";
 import { SiteHeader } from "./components/site-header";
 import { StoreProvider } from "./components/store-context";
 import "./globals.css";
 
-const plusJakartaSans = Plus_Jakarta_Sans({
-  subsets: ["latin"],
+const assistant = Assistant({
+  subsets: ["hebrew", "latin"],
   weight: ["400", "500", "700", "800"],
   display: "swap",
   variable: "--font-body",
 });
 
-const fraunces = Fraunces({
-  subsets: ["latin"],
+const frankRuhlLibre = Frank_Ruhl_Libre({
+  subsets: ["hebrew", "latin"],
   weight: ["400", "500", "700"],
   display: "swap",
   variable: "--font-display",
 });
 
 export const metadata: Metadata = {
-  title: "חנות קטנה ומטריפה | וינטג׳, יד שנייה ואספנות",
-  description: "חנות קטנה ומטריפה - פריטי וינטג׳, יד שנייה ואוצרות עם סיפור.",
+  title: "חנות קטנה ומטריפה | יד שנייה לילדים",
+  description:
+    "חנות יד שנייה מגניבה לילדים - בגדים, מציאות ושאר דברים במחירים שפויים. בלי הבטחה לבדיקה או לווינטג׳.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
@@ -29,10 +35,13 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="he" dir="rtl">
-      <body className={`${plusJakartaSans.variable} ${fraunces.variable}`}>
+      <body className={`${assistant.variable} ${frankRuhlLibre.variable}`}>
         <StoreProvider>
+          <a className="skipLink" href="#main-content">
+            דילוג לתוכן
+          </a>
           <SiteHeader />
-          {children}
+          <div id="main-content">{children}</div>
           <SiteFooter />
         </StoreProvider>
       </body>

@@ -10,16 +10,23 @@ export default async function Home() {
     <main>
       <section className="hero">
         <div>
-          <p className="eyebrow">וינטג׳ אמיתי · יד שנייה מוקפדת · פריטים עם נשמה</p>
+          <p className="eyebrow">יד שנייה לילדים · בגדים · מציאות · מחירים שפויים</p>
           <h1>
             חנות קטנה
             <br />
             <em>ומטריפה.</em>
           </h1>
           <p className="heroText">
-            אוצרות שנאספו בשווקים, בתים ישנים ונסיעות קטנות. כל פריט מקבל
-            במה חדשה - בדיוק כמו שמגיע לו.
+            חנות יד שנייה מגניבה לילדים, בסגנון יד2. בגדים, מציאות ושאר
+            דברים במחירים שפויים. בלי הבטחה שבדקנו או שאישרנו וינטג׳ -
+            פשוט פריטים שווים שאפשר לקחת הביתה.
           </p>
+          <ul className="categoryPills">
+            <li>בגדים</li>
+            <li>מציאות</li>
+            <li>צעצועים</li>
+            <li>מחיר שפוי</li>
+          </ul>
           <div className="heroButtons">
             <Link className="button" href="/shop">
               לכניסה לחנות
@@ -29,12 +36,12 @@ export default async function Home() {
             </Link>
           </div>
         </div>
-        <div className="heroImage" aria-label="תמונה של פריטי וינטג׳" />
+        <div className="heroImage" aria-label="תמונה של בגדי ילדים יד שנייה" />
       </section>
 
       <section className="intro" id="shop">
         <div>
-          <p className="eyebrow">נבחר ביד ובהרבה אהבה</p>
+          <p className="eyebrow">מה שיש עכשיו בחנות</p>
           <h2>הפריטים שעלו השבוע</h2>
         </div>
         <Link href="/shop">לכל הפריטים</Link>
@@ -79,9 +86,9 @@ export default async function Home() {
 
       <section className="statement">
         <p>
-          לא חדש. לא נקי מדי.
+          יד שנייה לילדים.
           <br />
-          <strong>וזה כל הקסם.</strong>
+          <strong>בגדים, מציאות ומחיר שפוי.</strong>
         </p>
       </section>
     </main>

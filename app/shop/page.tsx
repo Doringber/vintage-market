@@ -10,7 +10,10 @@ export default async function ShopPage() {
     <main className="shopPage">
       <header className="shopHeader">
         <h1>חנות קטנה ומטריפה</h1>
-        <p>כל הפריטים הייחודיים במקום אחד, עם ניווט פשוט וחוויית קנייה ברורה.</p>
+        <p>
+          בגדים, מציאות ושאר דברים לילדים במחירים שפויים. הפריטים נמכרים
+          כפי שהם, בלי הבטחה לבדיקה או לווינטג׳.
+        </p>
         <Link href="/products" className="button">
           עמוד מוצרים מלא
         </Link>

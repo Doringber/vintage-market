@@ -8,15 +8,19 @@ export function HeaderActions() {
 
   return (
     <div className="actions">
-      <Link className="buttonSecondary actionLink" href="/search">
-        חיפוש
-      </Link>
-
-      <Link className="buttonSecondary actionLink" href="/favorites">
+      <Link
+        className="buttonSecondary actionLink"
+        href="/favorites"
+        aria-label={`מועדפים, ${favoriteCount} פריטים`}
+      >
         מועדפים {favoriteCount}
       </Link>
 
-      <Link className="buttonSecondary actionLink" href="/cart">
+      <Link
+        className="buttonSecondary actionLink"
+        href="/cart"
+        aria-label={`סל קניות, ${cartCount} פריטים`}
+      >
         סל {cartCount}
       </Link>
     </div>
