@@ -10,15 +10,18 @@ export default async function AdminLoginPage() {
   return (
     <main className="contentPage">
       <h1>כניסת אדמין</h1>
-      <p>כאן עורכים מוצרים, כותרות, מידע ותמונות. העמוד לא מופיע בתפריט הציבורי.</p>
+      <p>
+        כאן עורכים מוצרים, כותרות, מידע ותמונות. אחרי שהאתר עולה לאינטרנט, נכנסים
+        מכל מכשיר לאותו עמוד עם הסיסמה שמוגדרת ב-Vercel.
+      </p>
       {hasAdminPassword() ? (
         <AdminLoginForm />
       ) : (
         <section className="contentBox">
           <h2>צריך סיסמה</h2>
           <p>
-            הוסיפו <code>ADMIN_PASSWORD</code> לקובץ <code>.env.local</code> והריצו
-            מחדש את האתר.
+            הוסיפו <code>ADMIN_PASSWORD</code> ב-Vercel לפריסה חיה, או לקובץ{" "}
+            <code>.env.local</code> במחשב, והריצו מחדש.
           </p>
         </section>
       )}

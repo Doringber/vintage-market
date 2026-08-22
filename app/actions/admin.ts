@@ -1,7 +1,5 @@
 "use server";
 
-import { mkdir, writeFile } from "node:fs/promises";
-import path from "node:path";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import {
@@ -11,16 +9,13 @@ import {
   setAdminSession,
   verifyAdminPassword,
 } from "../../lib/admin/auth";
+import { saveProductImage } from "../../lib/catalog/images";
 import { createProductSlug } from "../../lib/catalog/slug";
 import {
   getCatalogProduct,
-  readCatalog,
   upsertCatalogProduct,
 } from "../../lib/catalog/store";
 import type { CatalogProduct } from "../../lib/catalog/types";
-
-const ALLOWED_IMAGE_TYPES = new Set(["image/jpeg", "image/png", "image/webp", "image/gif"]);
-const MAX_IMAGE_BYTES = 4 * 1024 * 1024;
 
 function revalidateStorefront(slug?: string): void {
   revalidatePath("/");
@@ -35,7 +30,10 @@ function revalidateStorefront(slug?: string): void {
 
 export async function loginAdmin(formData: FormData): Promise<{ error: string } | void> {
   if (!hasAdminPassword()) {
-    return { error: "צריך להגדיר ADMIN_PASSWORD בקובץ .env.local." };
+    return {
+      error:
+        "צריך להגדיר ADMIN_PASSWORD בשרת (Vercel) או בקובץ .env.local במחשב.",
+    };
   }
 
   const password = String(formData.get("password") ?? "");
@@ -59,21 +57,7 @@ async function requireAdmin(): Promise<void> {
 }
 
 async function saveUploadedImage(file: File, slug: string): Promise<string | null> {
-  if (!file || file.size === 0) {
-    return null;
-  }
-
-  if (!ALLOWED_IMAGE_TYPES.has(file.type) || file.size > MAX_IMAGE_BYTES) {
-    throw new Error("אפשר להעלות תמונת JPG, PNG, WEBP או GIF עד 4MB.");
-  }
-
-  const extension = file.type.split("/")[1] ?? "jpg";
-  const fileName = `${slug}-${Date.now()}.${extension}`;
-  const uploadsDir = path.join(process.cwd(), "public", "uploads");
-  await mkdir(uploadsDir, { recursive: true });
-  const bytes = new Uint8Array(await file.arrayBuffer());
-  await writeFile(path.join(uploadsDir, fileName), bytes);
-  return `/uploads/${fileName}`;
+  return saveProductImage(file, slug);
 }
 
 function collectImageUrls(formData: FormData): string[] {

@@ -41,15 +41,31 @@ Supabase clients are ready in:
 
 ## Admin products
 
-Open http://localhost:3000/admin
+Open http://localhost:3000/admin locally, or `https://YOUR_DOMAIN/admin` after deploy.
 
-1. Add `ADMIN_PASSWORD` to `.env.local` and restart
+1. Add `ADMIN_PASSWORD` to `.env.local` (local) and to Vercel env vars (live site)
 2. Log in and edit product titles, info, prices, and images
 3. Upload image files or paste image URLs
 4. Hidden / zero-stock products stay out of the storefront
 
-Edits are saved to `data/catalog.json`. If `SUPABASE_SERVICE_ROLE_KEY` is set,
-they are also upserted into the `products` table.
+### Remote catalog updates
+
+The password in `.env.local` only works on that computer. To edit the shop
+from a phone or another computer:
+
+1. Create a free Supabase project
+2. Run `supabase/products.sql` in the Supabase SQL editor
+3. In Vercel → Settings → Environment Variables, add:
+   - `ADMIN_PASSWORD`
+   - `NEXT_PUBLIC_SUPABASE_URL`
+   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+   - `SUPABASE_SERVICE_ROLE_KEY`
+   - `NEXT_PUBLIC_SITE_URL` (`https://YOUR_DOMAIN`)
+4. Redeploy
+5. Open `https://YOUR_DOMAIN/admin`, sign in, and save products
+
+Products and uploaded images are stored in Supabase, so they survive deploys.
+On a laptop without Supabase, edits still save to `data/catalog.json`.
 
 ## Bit / PayBox transfer
 

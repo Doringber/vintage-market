@@ -1324,6 +1324,19 @@ a:focus-visible {
   }
 }
 
+.adminStatus {
+  margin: 0 0 18px;
+}
+
+.adminStatus h2 {
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+
+.adminStatus p {
+  margin: 0;
+}
+
 .adminForm {
   display: flex;
   flex-direction: column;

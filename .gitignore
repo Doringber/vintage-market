@@ -7,3 +7,4 @@ out
 tsconfig.tsbuildinfo
 public/uploads/*
 !public/uploads/.gitkeep
+data/catalog.json
