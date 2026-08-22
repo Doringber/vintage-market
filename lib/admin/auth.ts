@@ -6,7 +6,18 @@ const SESSION_HOURS = 12;
 
 function getAdminPassword(): string | null {
   const password = process.env.ADMIN_PASSWORD?.trim();
-  return password ? password : null;
+  if (!password) {
+    return null;
+  }
+
+  if (
+    (password.startsWith('"') && password.endsWith('"')) ||
+    (password.startsWith("'") && password.endsWith("'"))
+  ) {
+    return password.slice(1, -1).trim() || null;
+  }
+
+  return password;
 }
 
 export function hasAdminPassword(): boolean {

@@ -1,24 +1,19 @@
+import { readEnv } from "../catalog/backend";
+
 type SupabaseEnv = {
   url: string;
   anonKey: string;
 };
 
-function getEnvValue(name: string): string {
-  const value = process.env[name];
+export function getSupabaseEnv(): SupabaseEnv {
+  const url = readEnv("NEXT_PUBLIC_SUPABASE_URL");
+  const anonKey = readEnv("NEXT_PUBLIC_SUPABASE_ANON_KEY");
 
-  if (!value) {
+  if (!url || !anonKey) {
     throw new Error(
-      `Missing required environment variable: ${name}. ` +
-        "Add it to your .env.local file.",
+      "Missing required environment variable: NEXT_PUBLIC_SUPABASE_URL or NEXT_PUBLIC_SUPABASE_ANON_KEY.",
     );
   }
 
-  return value;
-}
-
-export function getSupabaseEnv(): SupabaseEnv {
-  return {
-    url: getEnvValue("NEXT_PUBLIC_SUPABASE_URL"),
-    anonKey: getEnvValue("NEXT_PUBLIC_SUPABASE_ANON_KEY"),
-  };
+  return { url, anonKey };
 }

@@ -4,21 +4,14 @@ import { products as fallbackProducts } from "../../app/data/products";
 import { parseShekels } from "../commerce/money";
 import { getSupabaseAdminClient } from "../supabase/admin";
 import { canUseRemoteCatalog, isEphemeralHost } from "./backend";
+import {
+  fetchProductRows,
+  upsertProductRow,
+  type ProductRow,
+} from "./remote";
 import type { CatalogProduct } from "./types";
 
 const CATALOG_PATH = path.join(process.cwd(), "data", "catalog.json");
-
-type ProductRow = {
-  slug: string;
-  name: string;
-  category: string;
-  price: number | string;
-  image_url: string | null;
-  images?: string[] | null;
-  description: string | null;
-  stock: number | null;
-  is_active: boolean | null;
-};
 
 function fromFallback(): CatalogProduct[] {
   return fallbackProducts.map((product) => ({
@@ -99,16 +92,16 @@ async function readRemoteCatalog(): Promise<CatalogProduct[] | null> {
     return null;
   }
 
-  const { data, error } = await supabase
-    .from("products")
-    .select("slug, name, category, price, image_url, images, description, stock, is_active")
-    .order("created_at", { ascending: false });
-
-  if (error) {
-    throw new Error(`לא הצלחנו לקרוא את הקטלוג מהענן: ${error.message}`);
+  const rows = await fetchProductRows(supabase);
+  if (rows.length === 0) {
+    const seeded = fromFallback();
+    for (const product of seeded) {
+      await upsertProductRow(supabase, toProductRow(product));
+    }
+    return seeded;
   }
 
-  return (data ?? []).map(mapRowToCatalogProduct);
+  return rows.map(mapRowToCatalogProduct);
 }
 
 async function upsertRemoteProduct(product: CatalogProduct): Promise<void> {
@@ -117,13 +110,7 @@ async function upsertRemoteProduct(product: CatalogProduct): Promise<void> {
     throw new Error("חסר SUPABASE_SERVICE_ROLE_KEY לשמירה מרחוק.");
   }
 
-  const { error } = await supabase
-    .from("products")
-    .upsert(toProductRow(product), { onConflict: "slug" });
-
-  if (error) {
-    throw new Error(`לא הצלחנו לשמור את המוצר בענן: ${error.message}`);
-  }
+  await upsertProductRow(supabase, toProductRow(product));
 }
 
 export async function readCatalog(): Promise<CatalogProduct[]> {
@@ -143,11 +130,8 @@ export async function writeCatalog(products: CatalogProduct[]): Promise<void> {
       throw new Error("חסר SUPABASE_SERVICE_ROLE_KEY לשמירה מרחוק.");
     }
 
-    const { error } = await supabase
-      .from("products")
-      .upsert(normalized.map(toProductRow), { onConflict: "slug" });
-    if (error) {
-      throw new Error(`לא הצלחנו לשמור את הקטלוג בענן: ${error.message}`);
+    for (const product of normalized) {
+      await upsertProductRow(supabase, toProductRow(product));
     }
     await writeLocalCatalogQuietly(normalized);
     return;
@@ -200,17 +184,8 @@ export async function getCatalogProduct(
       return null;
     }
 
-    const { data, error } = await supabase
-      .from("products")
-      .select("slug, name, category, price, image_url, images, description, stock, is_active")
-      .eq("slug", slug)
-      .maybeSingle();
-
-    if (error) {
-      throw new Error(`לא הצלחנו לקרוא את המוצר מהענן: ${error.message}`);
-    }
-
-    return data ? mapRowToCatalogProduct(data) : null;
+    const rows = await fetchProductRows(supabase, { slug });
+    return rows[0] ? mapRowToCatalogProduct(rows[0]) : null;
   }
 
   const catalog = await readCatalog();

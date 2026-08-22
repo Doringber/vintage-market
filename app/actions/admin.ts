@@ -36,7 +36,7 @@ export async function loginAdmin(formData: FormData): Promise<{ error: string } 
     };
   }
 
-  const password = String(formData.get("password") ?? "");
+  const password = String(formData.get("password") ?? "").trim();
   if (!verifyAdminPassword(password)) {
     return { error: "סיסמה שגויה." };
   }

@@ -14,16 +14,32 @@ export function isEphemeralHost(): boolean {
   return Boolean(process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME);
 }
 
+export function readEnv(name: string): string | null {
+  const raw = process.env[name]?.trim();
+  if (!raw) {
+    return null;
+  }
+
+  if (
+    (raw.startsWith('"') && raw.endsWith('"')) ||
+    (raw.startsWith("'") && raw.endsWith("'"))
+  ) {
+    return raw.slice(1, -1).trim() || null;
+  }
+
+  return raw;
+}
+
 export function hasSupabaseUrl(): boolean {
-  return Boolean(process.env.NEXT_PUBLIC_SUPABASE_URL?.trim());
+  return Boolean(readEnv("NEXT_PUBLIC_SUPABASE_URL"));
 }
 
 export function hasSupabaseAnonKey(): boolean {
-  return Boolean(process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY?.trim());
+  return Boolean(readEnv("NEXT_PUBLIC_SUPABASE_ANON_KEY"));
 }
 
 export function hasSupabaseServiceRole(): boolean {
-  return Boolean(process.env.SUPABASE_SERVICE_ROLE_KEY?.trim());
+  return Boolean(readEnv("SUPABASE_SERVICE_ROLE_KEY"));
 }
 
 export function canUseRemoteCatalog(): boolean {
@@ -43,7 +59,7 @@ export function getCatalogBackend(): CatalogBackend {
 }
 
 export function getSiteAdminUrl(): string | null {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim().replace(/\/$/, "");
+  const siteUrl = readEnv("NEXT_PUBLIC_SITE_URL")?.replace(/\/$/, "");
   return siteUrl ? `${siteUrl}/admin` : null;
 }
 
@@ -52,7 +68,7 @@ export function getCatalogStatus(): CatalogStatus {
   const anonKey = hasSupabaseAnonKey();
   return {
     backend: getCatalogBackend(),
-    hasAdminPassword: Boolean(process.env.ADMIN_PASSWORD?.trim()),
+    hasAdminPassword: Boolean(readEnv("ADMIN_PASSWORD")),
     hasSupabaseUrl: supabaseUrl,
     hasAnonKey: anonKey,
     hasServiceRole: hasSupabaseServiceRole(),

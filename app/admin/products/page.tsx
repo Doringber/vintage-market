@@ -2,6 +2,7 @@ import Link from "next/link";
 import { logoutAdmin } from "../../actions/admin";
 import { isAdminAuthenticated } from "../../../lib/admin/auth";
 import { readCatalog } from "../../../lib/catalog/store";
+import type { CatalogProduct } from "../../../lib/catalog/types";
 import { redirect } from "next/navigation";
 import { CatalogStatusNote } from "../catalog-status";
 
@@ -10,7 +11,14 @@ export default async function AdminProductsPage() {
     redirect("/admin");
   }
 
-  const products = await readCatalog();
+  let products: CatalogProduct[] = [];
+  let loadError: string | null = null;
+  try {
+    products = await readCatalog();
+  } catch (error) {
+    loadError =
+      error instanceof Error ? error.message : "לא הצלחנו לטעון את המוצרים מהענן.";
+  }
 
   return (
     <main className="shopPage">
@@ -18,6 +26,7 @@ export default async function AdminProductsPage() {
         <h1>עריכת מוצרים</h1>
         <p>אפשר לשנות כותרת, מחיר, מידע ותמונות. מוצר בלי מלאי או כבוי לא יופיע בחנות.</p>
         <CatalogStatusNote />
+        {loadError ? <p className="checkoutError">{loadError}</p> : null}
         <div className="heroButtons">
           <Link className="button" href="/admin/products/new">
             מוצר חדש
