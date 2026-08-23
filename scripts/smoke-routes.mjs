@@ -2,7 +2,7 @@ import { createHmac } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { spawn } from "node:child_process";
 
-const BASE = process.env.BASE_URL ?? "http://127.0.0.1:3010";
+const BASE = process.env.BASE_URL ?? "http://127.0.0.1:3040";
 const START_SERVER = process.env.SMOKE_START !== "0";
 
 const routes = [
@@ -183,9 +183,9 @@ async function runChecks() {
 async function main() {
   let server;
   if (START_SERVER && !process.env.BASE_URL) {
-    server = spawn("npx", ["next", "start", "-p", "3010"], {
+    server = spawn("npx", ["next", "start", "-p", "3040"], {
       stdio: "inherit",
-      env: { ...process.env, PORT: "3010" },
+      env: { ...process.env, PORT: "3040" },
     });
     await waitForServer(`${BASE}/`);
   }
