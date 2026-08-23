@@ -7,7 +7,6 @@ import {
   FREE_SHIPPING_FROM_SHEKELS,
   getShippingShekels,
 } from "../../lib/commerce/shipping";
-import { CheckoutButton } from "./checkout-button";
 import { TransferCheckout } from "./transfer-checkout";
 import { useStore } from "./store-context";
 
@@ -114,7 +113,6 @@ export function CartView() {
         <p>סה״כ לתשלום:</p>
         <strong>{formatShekels(total)}</strong>
         <TransferCheckout />
-        <CheckoutButton />
         <button className="buttonSecondary actionLink" type="button" onClick={clearCart}>
           ריקון סל
         </button>
