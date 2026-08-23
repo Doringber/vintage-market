@@ -4,7 +4,7 @@
   --accent-mustard: #c5ddb4;
   --accent-mustard-soft: #d7ecc8;
   --accent-teal: #3d9a6a;
-  --accent-terracotta: #b5d39a;
+  --accent-mint: #b5d39a;
   --accent-pink: #ffc0c0;
   --accent-blue: #80b0e8;
   --accent-lavender: #d1caea;
@@ -444,7 +444,7 @@ a:focus-visible {
   inset: auto -40px -50px auto;
   width: 180px;
   height: 180px;
-  background: var(--accent-terracotta);
+  background: var(--accent-mint);
   opacity: 0.35;
   border-radius: 60% 40% 50% 50% / 40% 60% 40% 60%;
 }
