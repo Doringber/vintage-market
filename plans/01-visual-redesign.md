@@ -28,7 +28,8 @@ Change only layout, color, shapes, and page rhythm.
 ## Four directions (pick one)
 
 ### A — WOODIC shop (recommended)
-Cream `#F5F3E8`, sage `#98A985`, mustard `#E9C46A`, terracotta `#D97D54`, dusty blue `#A8C0D8`, forest pill buttons `#4A5D45`.
+Cream `#F5F3E8`, light sage `#B5D39A`, mint tiles `#C5DDB4`, no orange/terracotta.
+Forest pill buttons `#4A5D45` stay for contrast.
 Modular rounded blocks, category tiles, organic photo frame, product cards on white.
 Best for a real shop: clear buy path, calm, kids-furniture energy.
 

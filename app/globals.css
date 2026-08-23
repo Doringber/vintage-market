@@ -1,15 +1,15 @@
 :root {
   --bg-color: #f5f3e8;
-  --primary: #98a985;
-  --accent-mustard: #e9c46a;
-  --accent-mustard-soft: #f4d242;
-  --accent-teal: #008471;
-  --accent-terracotta: #c45f3f;
+  --primary: #b5d39a;
+  --accent-mustard: #c5ddb4;
+  --accent-mustard-soft: #d7ecc8;
+  --accent-teal: #3d9a6a;
+  --accent-terracotta: #b5d39a;
   --accent-pink: #ffc0c0;
   --accent-blue: #80b0e8;
   --accent-lavender: #d1caea;
-  --accent-lime: #d6d35f;
-  --accent-olive: #898e46;
+  --accent-lime: #c8e86a;
+  --accent-olive: #7ea35a;
   --accent-bubble: #f29cc3;
   --forest: #4a5d45;
   --charcoal: #2f2a24;
@@ -430,7 +430,7 @@ a:focus-visible {
   min-height: 560px;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, rgba(152, 169, 133, 0.35), rgba(232, 196, 106, 0.2)),
+  background: linear-gradient(135deg, rgba(181, 211, 154, 0.45), rgba(61, 154, 106, 0.2)),
     url("https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=1400&q=90")
       center/cover;
   border: 0;
