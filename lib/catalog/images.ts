@@ -2,28 +2,16 @@ import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { getSupabaseAdminClient } from "../supabase/admin";
 import { canUseRemoteCatalog, isEphemeralHost } from "./backend";
+import { inspectProductImage } from "./image-kind";
 
 const PRODUCT_IMAGES_BUCKET = "product-images";
-const ALLOWED_IMAGE_TYPES = new Set([
-  "image/jpeg",
-  "image/png",
-  "image/webp",
-  "image/gif",
-]);
-const MAX_IMAGE_BYTES = 4 * 1024 * 1024;
-
-export function assertValidProductImage(file: File): void {
-  if (!ALLOWED_IMAGE_TYPES.has(file.type) || file.size > MAX_IMAGE_BYTES) {
-    throw new Error("אפשר להעלות תמונת JPG, PNG, WEBP או GIF עד 4MB.");
-  }
-}
 
 function imageExtension(file: File): string {
-  const fromType = file.type.split("/")[1];
-  if (fromType === "jpeg") {
-    return "jpg";
-  }
-  return fromType || "jpg";
+  return inspectProductImage(file).extension;
+}
+
+export function assertValidProductImage(file: File): void {
+  inspectProductImage(file);
 }
 
 async function saveLocalProductImage(file: File, slug: string): Promise<string> {
@@ -48,7 +36,7 @@ async function saveRemoteProductImage(file: File, slug: string): Promise<string>
   const { error } = await supabase.storage
     .from(PRODUCT_IMAGES_BUCKET)
     .upload(objectPath, bytes, {
-      contentType: file.type,
+      contentType: file.type || `image/${extension === "jpg" ? "jpeg" : extension}`,
       upsert: false,
     });
 
@@ -63,7 +51,7 @@ async function saveRemoteProductImage(file: File, slug: string): Promise<string>
 }
 
 export async function saveProductImage(
-  file: File,
+  file: File | null,
   slug: string,
 ): Promise<string | null> {
   if (!file || file.size === 0) {

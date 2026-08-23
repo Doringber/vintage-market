@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { AddToCartButton } from "./components/add-to-cart-button";
 import { FavoriteButton } from "./components/favorite-button";
+import { toCssImageUrl } from "../lib/catalog/media";
+import { storefrontProductHref } from "../lib/catalog/slug";
 import { getProducts } from "./data/products-repository";
 
 export default async function Home() {
@@ -52,8 +54,8 @@ export default async function Home() {
             <div className="imageLayer">
               <Link
                 className="imageWrap"
-                href={`/products/${product.slug}`}
-                style={{ backgroundImage: `url(${product.image})` }}
+                href={storefrontProductHref(product.slug)}
+                style={{ backgroundImage: toCssImageUrl(product.image) }}
               />
               <FavoriteButton className="heart" slug={product.slug} name={product.name} />
             </div>
@@ -61,7 +63,7 @@ export default async function Home() {
               <div>
                 <span>{product.category}</span>
                 <h3>
-                  <Link href={`/products/${product.slug}`}>{product.name}</Link>
+                  <Link href={storefrontProductHref(product.slug)}>{product.name}</Link>
                 </h3>
                 <p>{product.description}</p>
               </div>

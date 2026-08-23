@@ -9,6 +9,7 @@ import {
   upsertProductRow,
   type ProductRow,
 } from "./remote";
+import { decodeSlugParam } from "./slug";
 import type { CatalogProduct } from "./types";
 
 const CATALOG_PATH = path.join(process.cwd(), "data", "catalog.json");
@@ -178,18 +179,20 @@ export async function upsertCatalogProduct(
 export async function getCatalogProduct(
   slug: string,
 ): Promise<CatalogProduct | null> {
+  const normalized = decodeSlugParam(slug);
+
   if (canUseRemoteCatalog()) {
     const supabase = getSupabaseAdminClient();
     if (!supabase) {
       return null;
     }
 
-    const rows = await fetchProductRows(supabase, { slug });
+    const rows = await fetchProductRows(supabase, { slug: normalized });
     return rows[0] ? mapRowToCatalogProduct(rows[0]) : null;
   }
 
   const catalog = await readCatalog();
-  return catalog.find((item) => item.slug === slug) ?? null;
+  return catalog.find((item) => item.slug === normalized) ?? null;
 }
 
 function normalizeProduct(product: CatalogProduct): CatalogProduct {

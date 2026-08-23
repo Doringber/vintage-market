@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { AddToCartButton } from "../components/add-to-cart-button";
 import { FavoriteButton } from "../components/favorite-button";
+import { toCssImageUrl } from "../../lib/catalog/media";
+import { storefrontProductHref } from "../../lib/catalog/slug";
 import { getProducts } from "../data/products-repository";
 
 export default async function ShopPage() {
@@ -25,8 +27,8 @@ export default async function ShopPage() {
             <div className="imageLayer">
               <Link
                 className="shopImage"
-                href={`/products/${product.slug}`}
-                style={{ backgroundImage: `url(${product.image})` }}
+                href={storefrontProductHref(product.slug)}
+                style={{ backgroundImage: toCssImageUrl(product.image) }}
                 aria-label={`מעבר לפריט: ${product.name}`}
               />
               <FavoriteButton className="heart" slug={product.slug} name={product.name} />
@@ -34,7 +36,7 @@ export default async function ShopPage() {
             <div className="shopMeta">
               <span>{product.category}</span>
               <h2>
-                <Link href={`/products/${product.slug}`}>{product.name}</Link>
+                <Link href={storefrontProductHref(product.slug)}>{product.name}</Link>
               </h2>
               <p>{product.description}</p>
               <div className="metaActions">

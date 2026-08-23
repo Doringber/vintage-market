@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import { spawn } from "node:child_process";
 
 const BASE = process.env.BASE_URL ?? "http://127.0.0.1:3010";
@@ -32,6 +33,18 @@ const mustNotInclude = {
   "/cart": ["Stripe", "תשלום בכרטיס"],
   "/admin": ["Application error"],
 };
+
+try {
+  const saved = JSON.parse(readFileSync(".tmp/last-admin-product.json", "utf8"));
+  if (saved?.slug && saved?.name) {
+    const productPath = `/products/${saved.slug}`;
+    routes.push(productPath);
+    mustInclude[productPath] = [saved.name.slice(0, 8), "חזרה לחנות"];
+    mustInclude["/shop"].push(saved.name.slice(0, 8));
+  }
+} catch {
+  // Admin catalog smoke writes this file when a new product was saved.
+}
 
 async function waitForServer(url, timeoutMs = 45000) {
   const start = Date.now();

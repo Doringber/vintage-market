@@ -2,6 +2,7 @@ import { AddToCartButton } from "../../components/add-to-cart-button";
 import { FavoriteButton } from "../../components/favorite-button";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { toCssImageUrl } from "../../../lib/catalog/media";
 import { getProductBySlug } from "../../data/products-repository";
 
 type ProductPageProps = {
@@ -26,7 +27,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
         <div className="imageLayer">
           <div
             className="productImage"
-            style={{ backgroundImage: `url(${product.image})` }}
+            style={{ backgroundImage: toCssImageUrl(product.image) }}
             aria-label={`תמונה של ${product.name}`}
           />
           <FavoriteButton className="heart" slug={product.slug} name={product.name} />
@@ -36,7 +37,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                 <div
                   key={image}
                   className="productThumb"
-                  style={{ backgroundImage: `url(${image})` }}
+                  style={{ backgroundImage: toCssImageUrl(image) }}
                   aria-label={`תמונה נוספת של ${product.name}`}
                 />
               ))}

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { logoutAdmin } from "../../actions/admin";
 import { isAdminAuthenticated } from "../../../lib/admin/auth";
+import { toCssImageUrl } from "../../../lib/catalog/media";
+import { adminProductHref } from "../../../lib/catalog/slug";
 import { readCatalog } from "../../../lib/catalog/store";
 import type { CatalogProduct } from "../../../lib/catalog/types";
 import { redirect } from "next/navigation";
@@ -44,7 +46,7 @@ export default async function AdminProductsPage() {
           <article className="adminRow quirky-container" key={product.slug}>
             <div
               className="adminThumb"
-              style={{ backgroundImage: `url(${product.image})` }}
+              style={{ backgroundImage: toCssImageUrl(product.image) }}
               aria-hidden
             />
             <div>
@@ -54,7 +56,7 @@ export default async function AdminProductsPage() {
                 {product.isActive ? "מוצג" : "מוסתר"}
               </p>
             </div>
-            <Link className="button miniButton" href={`/admin/products/${product.slug}`}>
+            <Link className="button miniButton" href={adminProductHref(product.slug)}>
               עריכה
             </Link>
           </article>

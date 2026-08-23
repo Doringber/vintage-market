@@ -9,6 +9,12 @@ import {
   setAdminSession,
   verifyAdminPassword,
 } from "../../lib/admin/auth";
+import {
+  asUploadedFile,
+  collectImageUrls,
+  parseAdminProductFields,
+  resolveProductImages,
+} from "../../lib/catalog/admin-form";
 import { saveProductImage } from "../../lib/catalog/images";
 import { createProductSlug } from "../../lib/catalog/slug";
 import {
@@ -56,77 +62,52 @@ async function requireAdmin(): Promise<void> {
   }
 }
 
-async function saveUploadedImage(file: File, slug: string): Promise<string | null> {
-  return saveProductImage(file, slug);
-}
-
-function collectImageUrls(formData: FormData): string[] {
-  return formData
-    .getAll("imageUrls")
-    .map((value) => String(value).trim())
-    .filter((value) => value.length > 0);
-}
-
 export async function saveAdminProduct(formData: FormData): Promise<{ error: string } | void> {
   await requireAdmin();
 
-  const existingSlug = String(formData.get("slug") ?? "").trim();
-  const name = String(formData.get("name") ?? "").trim();
-  const category = String(formData.get("category") ?? "").trim();
-  const description = String(formData.get("description") ?? "").trim();
-  const price = Number(formData.get("price"));
-  const stock = Number(formData.get("stock"));
-  const isActive = formData.get("isActive") === "on";
-
-  if (name.length < 2) {
-    return { error: "צריך כותרת למוצר." };
+  const parsed = parseAdminProductFields(formData);
+  if ("error" in parsed) {
+    return parsed;
   }
 
-  if (!Number.isFinite(price) || price < 0) {
-    return { error: "צריך מחיר תקין." };
-  }
-
-  const slug = existingSlug || createProductSlug(name);
-  const existing = existingSlug ? await getCatalogProduct(existingSlug) : null;
+  const slug = parsed.existingSlug || createProductSlug(parsed.name);
+  const existing = parsed.existingSlug ? await getCatalogProduct(parsed.existingSlug) : null;
   const imageUrls = collectImageUrls(formData);
 
   try {
-    const uploadedMain = await saveUploadedImage(
-      formData.get("imageFile") as File,
+    const uploadedMain = await saveProductImage(
+      asUploadedFile(formData.get("imageFile")),
       slug,
     );
-    const extraFiles = formData.getAll("extraImageFiles") as File[];
+    const extraFiles = formData.getAll("extraImageFiles");
     const uploadedExtras: string[] = [];
-    for (const file of extraFiles) {
-      const saved = await saveUploadedImage(file, slug);
+    for (const value of extraFiles) {
+      const saved = await saveProductImage(asUploadedFile(value), slug);
       if (saved) {
         uploadedExtras.push(saved);
       }
     }
 
-    const image = uploadedMain ?? imageUrls[0] ?? existing?.image ?? "";
-    const images = [
-      ...imageUrls.filter((url) => url !== image),
-      ...uploadedExtras,
-      ...(existing?.images ?? []).filter(
-        (url) => url !== image && !imageUrls.includes(url),
-      ),
-    ];
-
-    if (!image) {
-      return { error: "צריך תמונה: להעלות קובץ או להדביק קישור." };
+    const images = resolveProductImages({
+      uploadedMain,
+      imageUrls,
+      uploadedExtras,
+      existing,
+    });
+    if ("error" in images) {
+      return images;
     }
 
     const product: CatalogProduct = {
       slug,
-      name,
-      category: category || "דברי ילדים",
-      price,
-      image,
-      images,
-      description,
-      stock: Number.isFinite(stock) ? stock : 1,
-      isActive,
+      name: parsed.name,
+      category: parsed.category || "דברי ילדים",
+      price: parsed.price,
+      image: images.image,
+      images: images.images,
+      description: parsed.description,
+      stock: parsed.stock,
+      isActive: parsed.isActive,
     };
 
     await upsertCatalogProduct(product);
@@ -139,4 +120,3 @@ export async function saveAdminProduct(formData: FormData): Promise<{ error: str
 
   redirect("/admin/products");
 }
-

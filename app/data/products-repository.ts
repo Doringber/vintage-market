@@ -3,6 +3,7 @@ import { hasSupabaseAnonKey, hasSupabaseUrl } from "../../lib/catalog/backend";
 import { fetchProductRows } from "../../lib/catalog/remote";
 import { mapRowToCatalogProduct, readCatalogFile } from "../../lib/catalog/store";
 import { getSupabaseServerClient } from "../../lib/supabase/server";
+import { decodeSlugParam } from "../../lib/catalog/slug";
 import { products as fallbackProducts, type Product } from "./products";
 
 const fallbackImage =
@@ -66,6 +67,7 @@ export async function getProducts(): Promise<Product[]> {
 
 export async function getProductBySlug(slug: string): Promise<Product | null> {
   noStore();
+  slug = decodeSlugParam(slug);
 
   if (hasSupabaseEnv()) {
     try {

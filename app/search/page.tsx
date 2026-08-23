@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { SearchForm } from "../components/search-form";
+import { toCssImageUrl } from "../../lib/catalog/media";
+import { storefrontProductHref } from "../../lib/catalog/slug";
 import { getProducts } from "../data/products-repository";
 
 type SearchPageProps = {
@@ -46,14 +48,14 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
             <article className="shopCard" key={product.slug}>
               <Link
                 className="shopImage"
-                href={`/products/${product.slug}`}
-                style={{ backgroundImage: `url(${product.image})` }}
+                href={storefrontProductHref(product.slug)}
+                style={{ backgroundImage: toCssImageUrl(product.image) }}
                 aria-label={`מעבר לפריט: ${product.name}`}
               />
               <div className="shopMeta">
                 <span>{product.category}</span>
                 <h2>
-                  <Link href={`/products/${product.slug}`}>{product.name}</Link>
+                  <Link href={storefrontProductHref(product.slug)}>{product.name}</Link>
                 </h2>
                 <p>{product.description}</p>
                 <strong>{product.price}</strong>

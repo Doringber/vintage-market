@@ -1388,11 +1388,22 @@ a:focus-visible {
   padding: 14px;
 }
 
-.adminFieldset input[type="url"] {
+.adminFieldset input {
   border: 1px solid rgba(47, 42, 36, 0.16);
   border-radius: 18px;
   padding: 10px 12px;
   font-size: 16px;
+}
+
+.adminForm input[type="file"] {
+  min-height: 44px;
+  padding: 8px;
+}
+
+.adminHint {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
 }
 
 .adminPreview,

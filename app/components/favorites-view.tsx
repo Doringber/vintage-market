@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import { toCssImageUrl } from "../../lib/catalog/media";
+import { storefrontProductHref } from "../../lib/catalog/slug";
 import { FavoriteButton } from "./favorite-button";
 import { useStore } from "./store-context";
 
@@ -40,8 +42,8 @@ export function FavoritesView({ products }: FavoritesViewProps) {
           <div className="imageLayer">
             <Link
               className="shopImage"
-              href={`/products/${product.slug}`}
-              style={{ backgroundImage: `url(${product.image})` }}
+              href={storefrontProductHref(product.slug)}
+              style={{ backgroundImage: toCssImageUrl(product.image) }}
               aria-label={`מעבר לפריט: ${product.name}`}
             />
             <FavoriteButton className="heart favoriteActive" slug={product.slug} name={product.name} />
@@ -49,7 +51,7 @@ export function FavoritesView({ products }: FavoritesViewProps) {
           <div className="shopMeta">
             <span>{product.category}</span>
             <h2>
-              <Link href={`/products/${product.slug}`}>{product.name}</Link>
+              <Link href={storefrontProductHref(product.slug)}>{product.name}</Link>
             </h2>
             <p>{product.description}</p>
             <strong>{product.price}</strong>

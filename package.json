@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "test": "node scripts/smoke-routes.mjs"
+    "test": "node scripts/admin-product-smoke.mjs && node scripts/smoke-routes.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.112.3",

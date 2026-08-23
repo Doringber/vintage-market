@@ -76,12 +76,23 @@ export async function isAdminAuthenticated(): Promise<boolean> {
   return isValidAdminSession(cookieStore.get(COOKIE_NAME)?.value);
 }
 
+function useSecureAdminCookie(): boolean {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim() ?? "";
+  if (siteUrl.startsWith("http://")) {
+    return false;
+  }
+  if (siteUrl.startsWith("https://")) {
+    return true;
+  }
+  return Boolean(process.env.VERCEL);
+}
+
 export async function setAdminSession(): Promise<void> {
   const cookieStore = await cookies();
   cookieStore.set(COOKIE_NAME, createAdminSessionToken(), {
     httpOnly: true,
     sameSite: "lax",
-    secure: process.env.NODE_ENV === "production",
+    secure: useSecureAdminCookie(),
     path: "/",
     maxAge: SESSION_HOURS * 60 * 60,
   });

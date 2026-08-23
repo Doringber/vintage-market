@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useMemo } from "react";
+import { toCssImageUrl } from "../../lib/catalog/media";
 import { formatShekels, parseShekels } from "../../lib/commerce/money";
 import {
   FREE_SHIPPING_FROM_SHEKELS,
@@ -70,7 +71,7 @@ export function CartView() {
           <article className="cartItem quirky-container" key={item.slug}>
             <div
               className="cartThumb"
-              style={{ backgroundImage: `url(${item.product.image})` }}
+              style={{ backgroundImage: toCssImageUrl(item.product.image) }}
               aria-label={`תמונה של ${item.product.name}`}
             />
             <div className="cartBody">
