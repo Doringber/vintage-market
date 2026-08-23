@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { saveAdminProduct } from "../../actions/admin";
+import { compressImageForUpload } from "../../../lib/catalog/compress-image";
 import { PRODUCT_IMAGE_ACCEPT } from "../../../lib/catalog/image-kind";
 import { toCssImageUrl } from "../../../lib/catalog/media";
 import type { CatalogProduct } from "../../../lib/catalog/types";
@@ -26,17 +26,73 @@ export function ProductForm({ product }: ProductFormProps) {
     };
   }, [previewObjectUrl]);
 
-  async function handleSubmit(formData: FormData) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
     setPending(true);
     setError(null);
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
     extraUrls.forEach((url) => {
       if (url.trim()) {
         formData.append("imageUrls", url.trim());
       }
     });
-    const result = await saveAdminProduct(formData);
-    if (result?.error) {
-      setError(result.error);
+
+    const mainFile = formData.get("imageFile");
+    if (mainFile instanceof File && mainFile.size > 0) {
+      formData.set("imageFileSelected", "1");
+      formData.set("imageFile", await compressImageForUpload(mainFile));
+    }
+
+    const extraFiles = formData.getAll("extraImageFiles").filter(
+      (value): value is File => value instanceof File && value.size > 0,
+    );
+    if (extraFiles.length > 0) {
+      formData.set("extraImageFilesSelected", "1");
+      formData.delete("extraImageFiles");
+      for (const file of extraFiles) {
+        formData.append("extraImageFiles", await compressImageForUpload(file));
+      }
+    }
+
+    const hasImage =
+      (formData.get("imageFile") instanceof File &&
+        (formData.get("imageFile") as File).size > 0) ||
+      extraFiles.length > 0 ||
+      Boolean(String(formData.get("imageUrls") ?? "").trim()) ||
+      extraUrls.some((url) => url.trim().length > 0) ||
+      Boolean(product?.image);
+
+    if (!hasImage) {
+      setError("צריך תמונה: להעלות קובץ או להדביק קישור.");
+      setPending(false);
+      return;
+    }
+
+    try {
+      const response = await fetch("/api/admin/products", {
+        method: "POST",
+        body: formData,
+      });
+      const payload = (await response.json().catch(() => null)) as
+        | { error?: string; slug?: string }
+        | null;
+
+      if (response.status === 401) {
+        window.location.href = "/admin";
+        return;
+      }
+
+      if (!response.ok || payload?.error) {
+        setError(payload?.error || "לא הצלחנו לשמור את המוצר.");
+        setPending(false);
+        return;
+      }
+
+      window.location.href = "/admin/products";
+    } catch {
+      setError("לא הצלחנו לשמור את המוצר. בדקי את החיבור ונסי שוב.");
       setPending(false);
     }
   }
@@ -44,7 +100,7 @@ export function ProductForm({ product }: ProductFormProps) {
   return (
     <form
       className="adminForm"
-      action={handleSubmit}
+      onSubmit={handleSubmit}
       encType="multipart/form-data"
     >
       {product ? <input type="hidden" name="slug" value={product.slug} /> : null}
@@ -162,6 +218,7 @@ export function ProductForm({ product }: ProductFormProps) {
           <input
             key={`${url}-${index}`}
             type="text"
+            name="extraImageUrls"
             value={url}
             inputMode="url"
             placeholder="https:// או /uploads/..."

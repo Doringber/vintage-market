@@ -1,3 +1,4 @@
+import { createHmac } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { spawn } from "node:child_process";
 
@@ -101,6 +102,72 @@ async function checkCssTokens() {
   }
 }
 
+function readAdminPassword() {
+  let password = process.env.ADMIN_PASSWORD?.trim() ?? "";
+  if (!password) {
+    try {
+      const line = readFileSync(".env.local", "utf8")
+        .split("\n")
+        .find((item) => item.startsWith("ADMIN_PASSWORD="));
+      password = line?.slice("ADMIN_PASSWORD=".length).trim() ?? "";
+    } catch {
+      password = "";
+    }
+  }
+
+  if (
+    (password.startsWith('"') && password.endsWith('"')) ||
+    (password.startsWith("'") && password.endsWith("'"))
+  ) {
+    password = password.slice(1, -1).trim();
+  }
+
+  return password || null;
+}
+
+async function checkAdminImageUpload() {
+  const password = readAdminPassword();
+  if (!password) {
+    console.log("admin-upload-http: skipped");
+    return;
+  }
+
+  const payload = String(Date.now() + 12 * 60 * 60 * 1000);
+  const token = `${payload}.${createHmac("sha256", password).update(payload).digest("hex")}`;
+  const png = Buffer.from(
+    "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==",
+    "base64",
+  );
+  const form = new FormData();
+  form.set("name", "חולצת ילדים לבדיקת העלאה");
+  form.set("category", "בגדים");
+  form.set("price", "25");
+  form.set("stock", "1");
+  form.set("description", "פריט בדיקה להעלאת תמונה מהאדמין.");
+  form.set("isActive", "on");
+  form.set("imageFileSelected", "1");
+  form.set("imageFile", new File([png], "upload-check.png", { type: "image/png" }));
+
+  const response = await fetch(`${BASE}/api/admin/products`, {
+    method: "POST",
+    headers: { cookie: `admin_session=${token}` },
+    body: form,
+  });
+  const body = await response.json();
+  if (!response.ok) {
+    throw new Error(`admin upload failed ${response.status}: ${body.error ?? "unknown"}`);
+  }
+  if (!body.slug) {
+    throw new Error("admin upload did not return a slug");
+  }
+
+  const productPage = await fetch(`${BASE}/products/${body.slug}`);
+  const html = await productPage.text();
+  if (productPage.status >= 400 || !html.includes("חולצת ילדים")) {
+    throw new Error(`uploaded product page missing ${body.slug}`);
+  }
+}
+
 async function runChecks() {
   const results = [];
   for (const path of routes) {
@@ -108,6 +175,7 @@ async function runChecks() {
     results.push(`${status} ${path}`);
   }
   await checkCssTokens();
+  await checkAdminImageUpload();
   console.log(results.join("\n"));
   console.log("smoke-routes: ok");
 }

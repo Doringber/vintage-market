@@ -24,12 +24,17 @@ export function asUploadedFile(
     return null;
   }
 
-  const candidate = value as File;
-  if (typeof candidate.size !== "number" || candidate.size <= 0) {
-    return null;
+  if (typeof File !== "undefined" && value instanceof File) {
+    return value.size > 0 ? value : null;
   }
 
-  return candidate;
+  if (typeof Blob !== "undefined" && value instanceof Blob && value.size > 0) {
+    const named = value as File;
+    const name = typeof named.name === "string" && named.name ? named.name : "upload.jpg";
+    return new File([value], name, { type: value.type || "image/jpeg" });
+  }
+
+  return null;
 }
 
 export function parseAdminProductFields(
@@ -68,11 +73,18 @@ export function resolveProductImages(input: {
   uploadedExtras: string[];
   existing: CatalogProduct | null;
 }): { image: string; images: string[] } | { error: string } {
+  const leftoverExtras = input.uploadedExtras.filter(
+    (url) => url !== input.uploadedMain,
+  );
   const image =
-    input.uploadedMain ?? input.imageUrls[0] ?? input.existing?.image ?? "";
+    input.uploadedMain ??
+    input.imageUrls[0] ??
+    leftoverExtras[0] ??
+    input.existing?.image ??
+    "";
   const images = [
     ...input.imageUrls.filter((url) => url !== image),
-    ...input.uploadedExtras,
+    ...leftoverExtras.filter((url) => url !== image),
     ...(input.existing?.images ?? []).filter(
       (url) => url !== image && !input.imageUrls.includes(url),
     ),

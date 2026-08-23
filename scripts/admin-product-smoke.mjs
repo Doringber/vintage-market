@@ -155,6 +155,17 @@ async function main() {
     `local upload should return /uploads path, got ${uploadedMain}`,
   );
 
+  const extrasOnly = adminForm.resolveProductImages({
+    uploadedMain: null,
+    imageUrls: [],
+    uploadedExtras: ["/uploads/extra.png"],
+    existing: null,
+  });
+  assert(
+    !("error" in extrasOnly) && extrasOnly.image === "/uploads/extra.png",
+    "extra uploaded images should be usable as the main image",
+  );
+
   const resolved = adminForm.resolveProductImages({
     uploadedMain,
     imageUrls: [],
