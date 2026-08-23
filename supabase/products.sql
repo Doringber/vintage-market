@@ -23,6 +23,8 @@ for select
 to anon, authenticated
 using (is_active = true and stock > 0);
 
+-- Public folder for admin photo uploads. The live admin also creates this
+-- bucket automatically if it is missing.
 insert into storage.buckets (id, name, public)
 values ('product-images', 'product-images', true)
 on conflict (id) do update set public = true;

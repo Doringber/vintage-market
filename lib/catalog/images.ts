@@ -3,8 +3,11 @@ import path from "node:path";
 import { getSupabaseAdminClient } from "../supabase/admin";
 import { canUseRemoteCatalog, isEphemeralHost } from "./backend";
 import { inspectProductImage } from "./image-kind";
-
-const PRODUCT_IMAGES_BUCKET = "product-images";
+import {
+  PRODUCT_IMAGES_BUCKET,
+  ensureProductImagesBucket,
+  isMissingStorageBucket,
+} from "./storage";
 
 function imageExtension(file: File): string {
   return inspectProductImage(file).extension;
@@ -24,6 +27,31 @@ async function saveLocalProductImage(file: File, slug: string): Promise<string> 
   return `/uploads/${fileName}`;
 }
 
+async function uploadRemoteBytes(
+  supabase: NonNullable<ReturnType<typeof getSupabaseAdminClient>>,
+  bytes: Uint8Array,
+  contentType: string,
+  slug: string,
+  extension: string,
+): Promise<{ publicUrl: string } | { error: { message?: string } }> {
+  const objectPath = `${slug}/${Date.now()}.${extension}`;
+  const { error } = await supabase.storage
+    .from(PRODUCT_IMAGES_BUCKET)
+    .upload(objectPath, bytes, {
+      contentType,
+      upsert: false,
+    });
+
+  if (error) {
+    return { error };
+  }
+
+  const { data } = supabase.storage
+    .from(PRODUCT_IMAGES_BUCKET)
+    .getPublicUrl(objectPath);
+  return { publicUrl: data.publicUrl };
+}
+
 async function saveRemoteProductImage(file: File, slug: string): Promise<string> {
   const supabase = getSupabaseAdminClient();
   if (!supabase) {
@@ -31,23 +59,25 @@ async function saveRemoteProductImage(file: File, slug: string): Promise<string>
   }
 
   const extension = imageExtension(file);
-  const objectPath = `${slug}/${Date.now()}.${extension}`;
+  const contentType =
+    file.type || `image/${extension === "jpg" ? "jpeg" : extension}`;
   const bytes = new Uint8Array(await file.arrayBuffer());
-  const { error } = await supabase.storage
-    .from(PRODUCT_IMAGES_BUCKET)
-    .upload(objectPath, bytes, {
-      contentType: file.type || `image/${extension === "jpg" ? "jpeg" : extension}`,
-      upsert: false,
-    });
 
-  if (error) {
-    throw new Error(`לא הצלחנו להעלות תמונה לענן: ${error.message}`);
+  let result = await uploadRemoteBytes(supabase, bytes, contentType, slug, extension);
+  if ("error" in result && isMissingStorageBucket(result.error)) {
+    await ensureProductImagesBucket(supabase);
+    result = await uploadRemoteBytes(supabase, bytes, contentType, slug, extension);
+  } else if ("error" in result) {
+    throw new Error(`לא הצלחנו להעלות תמונה לענן: ${result.error.message}`);
   }
 
-  const { data } = supabase.storage
-    .from(PRODUCT_IMAGES_BUCKET)
-    .getPublicUrl(objectPath);
-  return data.publicUrl;
+  if ("error" in result) {
+    throw new Error(
+      `לא הצלחנו להעלות תמונה לענן אחרי יצירת תיקיית product-images: ${result.error.message}`,
+    );
+  }
+
+  return result.publicUrl;
 }
 
 export async function saveProductImage(

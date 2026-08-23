@@ -17,6 +17,7 @@ const COMPILE_FILES = [
   "lib/catalog/slug.ts",
   "lib/catalog/backend.ts",
   "lib/catalog/images.ts",
+  "lib/catalog/storage.ts",
   "lib/catalog/store.ts",
   "lib/catalog/remote.ts",
   "lib/catalog/types.ts",
@@ -79,6 +80,7 @@ async function main() {
   compileWorkspaceModules();
 
   const imageKind = await import(pathToFileURL(path.join(OUT_DIR, "lib/catalog/image-kind.js")).href);
+  const storage = await import(pathToFileURL(path.join(OUT_DIR, "lib/catalog/storage.js")).href);
   const adminForm = await import(pathToFileURL(path.join(OUT_DIR, "lib/catalog/admin-form.js")).href);
   const slugMod = await import(pathToFileURL(path.join(OUT_DIR, "lib/catalog/slug.js")).href);
   const images = await import(pathToFileURL(path.join(OUT_DIR, "lib/catalog/images.js")).href);
@@ -106,6 +108,19 @@ async function main() {
         size: 2048,
       }),
     "HEIC",
+  );
+
+  assert(
+    storage.isMissingStorageBucket({ message: "Bucket not found" }),
+    "Bucket not found should be detected",
+  );
+  assert(
+    !storage.isMissingStorageBucket({ message: "Payload too large" }),
+    "other storage errors should not look like a missing bucket",
+  );
+  assert(
+    storage.isExistingStorageBucket({ message: "The resource already exists", statusCode: "409" }),
+    "duplicate bucket should be treated as already created",
   );
 
   const emptyFile = adminForm.asUploadedFile("");
