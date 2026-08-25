@@ -1,0 +1,771 @@
+{
+  "syncedAt": "2026-08-25T19:37:51.026Z",
+  "source": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049",
+  "count": 45,
+  "places": [
+    {
+      "slug": "wizo-נס-ציונה",
+      "name": "ביגודית נס ציונה",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "הרב בארי 4 , 7420821",
+      "city": "7420821",
+      "lat": 31.932111,
+      "lng": 34.801327,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "08-6210582",
+      "hours": "א-ה 09:30-12:30, א,ב,ג,ד 16:00-18:00, ו 09:00-12:00",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-אזור",
+      "name": "ביגודית אזור",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "אחד במאי 13",
+      "city": "אזור",
+      "lat": 32.022469,
+      "lng": 34.807785,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "03-5599014",
+      "hours": "א,ג,ה 10:00-12:00, ד 16:00-18:00",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-אילת",
+      "name": "ביגודית אילת",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "שדרות ירושלים השלמה 29",
+      "city": "אילת",
+      "lat": 29.56215,
+      "lng": 34.946087,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "08-6317362",
+      "hours": "א-ה 09:30-12:30",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-אשדוד",
+      "name": "ביגודית אשדוד",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "יאיר 4",
+      "city": "אשדוד",
+      "lat": 31.804381,
+      "lng": 34.655314,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "076-8009791",
+      "hours": "א-ה 08:30-15:30, ו- 08:30-12:00",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-אשקלון",
+      "name": "ביגודית אשקלון",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "שיבת ציון 10",
+      "city": "אשקלון",
+      "lat": 31.668789,
+      "lng": 34.574252,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "08-6732541",
+      "hours": "א-ה 09:30-13:00",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-באר-שבע",
+      "name": "ביגודית באר שבע",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "ויצמן 1",
+      "city": "באר שבע",
+      "lat": 31.246928,
+      "lng": 34.795687,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "08-6277714",
+      "hours": "א-ה 09:00-16:00, ו 08:30-12:30",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-בת-ים",
+      "name": "ביגודית בת ים",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "שדרות העצמאות 49",
+      "city": "בת ים",
+      "lat": 32.025238,
+      "lng": 34.747585,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "03-5082155",
+      "hours": "א-ה - 09:00-15:00, א,ד - 15:00-18:30 (יש לבדוק מול הסניף)",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-גבעתיים",
+      "name": "ביגודית גבעתיים",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "ל\"ה 62",
+      "city": "גבעתיים",
+      "lat": 32.073444,
+      "lng": 34.808496,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "03-7411739",
+      "hours": "א-ה: 10:00-18:00, ו: 09:00-14:00",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-גבעתיים-&#8211;-דיסקית",
+      "name": "ביגודית גבעתיים &#8211; דיסקית",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "ל\"ה 62",
+      "city": "גבעתיים &#8211; דיסקית",
+      "lat": 32.073444,
+      "lng": 34.808496,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "03-7411739",
+      "hours": "א-ה: 09:00-18:00, ו: 09:00-13:00",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-דימונה",
+      "name": "ביגודית דימונה",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "בר כוכבא 210",
+      "city": "דימונה",
+      "lat": 31.069419,
+      "lng": 35.033363,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "08-6556469",
+      "hours": "א-ה 08:30-15:00",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-הוד-השרון",
+      "name": "ביגודית הוד השרון",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "הבנים 23",
+      "city": "הוד השרון",
+      "lat": 32.155398,
+      "lng": 34.89009,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "09-7442287",
+      "hours": "א,-ו':  08:30 - 13:00 / א: 15:30-17:45 / ב'+ד': 15:30-18:00",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-הרצליה-העיר",
+      "name": "ביגודית הרצליה העיר",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "ראש פינה 12",
+      "city": "הרצליה העיר",
+      "lat": 32.17514,
+      "lng": 34.808701,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "09-9540152",
+      "hours": "א-ו 09:00-13:00, א,ג,ד,ה 16:00-18:00",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-הרצליה-פיתוח",
+      "name": "ביגודית הרצליה פיתוח",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "הנשיא יצחק בן צבי 132",
+      "city": "הרצליה פיתוח",
+      "lat": 32.17514,
+      "lng": 34.808701,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "09-9570910",
+      "hours": "א-ה 10:00-14:00",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-זכרון-יעקב",
+      "name": "ביגודית זכרון יעקב",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "הנשיא 35",
+      "city": "זכרון יעקב",
+      "lat": 32.573953,
+      "lng": 34.952093,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "04-6059277",
+      "hours": "א-ו 10:00-13:00, ב,ג 16:30-18:30",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-חדרה",
+      "name": "ביגודית חדרה",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "הרצוג 8",
+      "city": "חדרה",
+      "lat": 32.434046,
+      "lng": 34.919652,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "04-6323540",
+      "hours": "א,ב,ד,ה 09:00-14:00, ג 09:00-18:00",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-חולון",
+      "name": "ביגודית חולון",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "שדרות ירושלים 1",
+      "city": "חולון",
+      "lat": 32.022282,
+      "lng": 34.785976,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "03-5502880",
+      "hours": "א, ג, ד, ה: 09:00-16:00 / ב: 09:00-13:40",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-קרית-חיים",
+      "name": "ביגודית קרית חיים",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "משמר העמק 19, קרית חיים מערבית, חיפה",
+      "city": "חיפה",
+      "lat": 32.836185,
+      "lng": 35.059982,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "04-6058015",
+      "hours": "א-ה 09:30-12:00, ב, ד 15:45-17:45",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-חיפה-מוריה",
+      "name": "ביגודית חיפה מוריה",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "שדרות מוריה 50",
+      "city": "חיפה מוריה",
+      "lat": 32.797403,
+      "lng": 34.984075,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "04-8388819",
+      "hours": "א-ה 09:00-18:30, ו 09:00-13:30",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-חיפה-נווה-שאנן",
+      "name": "ביגודית חיפה נווה שאנן",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "התיכון 1",
+      "city": "חיפה נווה שאנן",
+      "lat": 32.793753,
+      "lng": 35.01262,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "04-8325398",
+      "hours": "א-ה 09:00-19:00, ו 09:00-14:00",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-טבריה",
+      "name": "ביגודית טבריה",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "שמעון דהאן 24",
+      "city": "טבריה",
+      "lat": 32.79665,
+      "lng": 35.526657,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "04-6720748",
+      "hours": "א-ה 09:30-13:00",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-ירושלים",
+      "name": "ביגודית ירושלים",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "הלל 11",
+      "city": "ירושלים",
+      "lat": 31.780444,
+      "lng": 35.216514,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "02-6252096",
+      "hours": "א-ה 10:00-18:00, ימי ו וערבי חג- 10:00-14:00",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-כפר-סבא",
+      "name": "ביגודית כפר סבא",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "ויצמן 121",
+      "city": "כפר סבא",
+      "lat": 32.178195,
+      "lng": 34.90761,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "09-7673190",
+      "hours": "א,ג,ה 10:00-16:00, ב,ד 10:00-18:00",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-כרמיאל",
+      "name": "ביגודית כרמיאל",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "שריג 20",
+      "city": "כרמיאל",
+      "lat": 32.913008,
+      "lng": 35.285774,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "04-9985993",
+      "hours": "א-ה 08:30-11:30, ד 16:00-18:00",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-רחובות",
+      "name": "ביגודית רחובות",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "הרצל 164  מכירת בגדים , למסירת בגדים הרצל 131 בלבד",
+      "city": "למסירת בגדים הרצל 131 בלבד",
+      "lat": 31.894791,
+      "lng": 34.812611,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "08-9493530",
+      "hours": "א,ד - 09:00-18:00, ב,ג,ה - 09:00-14:00, ו-09:00-13:00",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-מודיעין",
+      "name": "ביגודית מודיעין",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "אחלמה 1 (הכניסה מסביב)",
+      "city": "מודיעין",
+      "lat": 31.903673,
+      "lng": 34.996952,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "08-9708786",
+      "hours": "א'-ו': 09:00-13:00 | א', ג', ה': 16:00-19:00",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-נהריה",
+      "name": "ביגודית נהריה",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "המייסדים 7",
+      "city": "נהריה",
+      "lat": 33.008536,
+      "lng": 35.098051,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "04-9923224",
+      "hours": "א-ה 09:00-12:30, ד 16:00-18:00",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-נתניה-סמילנסקי",
+      "name": "ביגודית נתניה (סמילנסקי)",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "סמילנסקי 9",
+      "city": "נתניה",
+      "lat": 32.327493,
+      "lng": 34.855507,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "09-8823192",
+      "hours": "א-ה 09:00-12:30",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-נתניה-מקדונלד",
+      "name": "ביגודית נתניה (מקדונלד)",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "נתניה מקדונלד 13",
+      "city": "נתניה",
+      "lat": 32.327493,
+      "lng": 34.855507,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "09-8823192",
+      "hours": "א-ה 09:00-16:30",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-סביון",
+      "name": "ביגודית סביון",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "דוכיפת 11",
+      "city": "סביון",
+      "lat": 32.041777,
+      "lng": 34.886879,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "03-7362034",
+      "hours": "א-ד 09:00-12:30",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-עפולה",
+      "name": "ביגודית עפולה",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "מנחם אוסישקין 19",
+      "city": "עפולה",
+      "lat": 32.610493,
+      "lng": 35.287922,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "04-6523491",
+      "hours": "א,ב,ד,ה 08:00-12:00",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-פרדס-חנה",
+      "name": "ביגודית פרדס חנה",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "חרובים 5",
+      "city": "פרדס חנה",
+      "lat": 32.472803,
+      "lng": 34.9742,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "04-6373470",
+      "hours": "א' סגור / ב,ה, 10:00-14:00 / ג,ד 10:00-18:00",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-פתח-תקווה",
+      "name": "ביגודית פתח תקווה",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "רחוב גוטמן 4, פתח תקווה",
+      "city": "פתח תקווה",
+      "lat": 32.082037,
+      "lng": 34.886092,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "hours": "ראשון עד חמישי 08:00 עד 16:00  שישי 08:00 עד 12:30",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-קדימה",
+      "name": "ביגודית קדימה",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "ההגנה 17 (פינת בן צבי)",
+      "city": "קדימה",
+      "lat": 32.277919,
+      "lng": 34.911274,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "09-8990050",
+      "hours": "א,ב,ד 09:00-12:30, א,ג 16:00-18:00, ו- 09:00-11:00",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-קרית-גת",
+      "name": "ביגודית קרית גת",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "משעול פז 8",
+      "city": "קרית גת",
+      "lat": 31.610472,
+      "lng": 34.772295,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "08-6881206",
+      "hours": "א,ב,ד,ה - 09:00-13:00, ג- 09:00-15:00",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-קרית-ים",
+      "name": "ביגודית קרית ים",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "אלי כהן 10",
+      "city": "קרית ים",
+      "lat": 32.841838,
+      "lng": 35.065158,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "04-8758486",
+      "hours": "א-ה 09:00-12:30, ב, ד 15:45-17:45",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-קרית-מלאכי",
+      "name": "ביגודית קרית מלאכי",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "שדרות בן גוריון 17",
+      "city": "קרית מלאכי",
+      "lat": 31.729175,
+      "lng": 34.74496,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "08-8581620",
+      "hours": "א,ב,ג,ד,ה 10:00-14:00, ב,ג,ד 17:00-19:00",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-קרית-שמונה",
+      "name": "ביגודית קרית שמונה",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "עולי הגרדום 18",
+      "city": "קרית שמונה",
+      "lat": 33.203584,
+      "lng": 35.566212,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "04-6903523",
+      "hours": "א'-ה': 09:00-14:00 / ד': 16:00-18:00",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-ראשון-לציון",
+      "name": "ביגודית ראשון לציון",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "רוטנברג 7",
+      "city": "ראשון לציון",
+      "lat": 32.072805,
+      "lng": 34.774209,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "03-6227420",
+      "hours": "א-ד- 09:30-13:30, א-ד- 16:00-19:00, ה- 09:30-13:30",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-רמת-גן-אצ&#8221;ל",
+      "name": "ביגודית רמת גן (אצ&#8221;ל)",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "האצ\"ל 25",
+      "city": "רמת גן",
+      "lat": 32.066224,
+      "lng": 34.833277,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "03-6770946",
+      "hours": "א-ה 09:00-12:00",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-רמת-גן-בעל-הנס",
+      "name": "ביגודית רמת גן (בעל הנס)",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "מאיר בעל הנס 12",
+      "city": "רמת גן",
+      "lat": 32.072805,
+      "lng": 34.774209,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "03-7586944",
+      "hours": "א-ה 09:00-12:00",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-רמת-השרון",
+      "name": "ביגודית רמת השרון",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "סוקולוב 56",
+      "city": "רמת השרון",
+      "lat": 32.144182,
+      "lng": 34.838042,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "03-5493204",
+      "hours": "א,ב,ג,ד - 08:00-19:00, ה- 08:00-16:00, ו- 08:00-12:30",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-רעננה",
+      "name": "ביגודית רעננה",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "קלאוזנר 3",
+      "city": "רעננה",
+      "lat": 32.19238,
+      "lng": 34.874534,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "09-7483553",
+      "hours": "א': 09:00-18:30 | ב': 09:00-13:00 | ג',ה': 09:00-13:00, 16:00-18:30 | ד': 09:00-13:00 | ו': 09:00-12:00",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-תל-אביב-קינג-ג&#8217;ורג&#8217;",
+      "name": "ביגודית תל אביב קינג ג&#8217;ורג&#8217;",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "קינג ג'ורג' 35",
+      "city": "תל אביב",
+      "lat": 32.072805,
+      "lng": 34.774209,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "03-6206851",
+      "hours": "א-ה: 10:00-16:00, ו': 09:00-14:00 (משתנה)",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-תל-אביב-&#8211;-רמת-אביב",
+      "name": "ביגודית תל אביב &#8211; רמת אביב",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "ברודצקי 19, תל אביב",
+      "city": "תל אביב",
+      "lat": 32.108109,
+      "lng": 34.797529,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "03-6854936",
+      "hours": "א', ג', ה': 16:30–09:00 | ב': 09:00-17:00 | ד': 09:00-18:00 |  ו' - 09:00-13:00",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    },
+    {
+      "slug": "wizo-תל-אביב-דוד-המלך",
+      "name": "ביגודית תל אביב דוד המלך",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "דוד המלך 38, תל אביב",
+      "city": "תל אביב",
+      "lat": 32.080055,
+      "lng": 34.78495,
+      "description": "ביגודית ויצו — חנות יד שנייה לתרומה ורכישת בגדים. הכנסות מופנות לפעילות רווחה של ויצו.",
+      "phone": "03-6965388",
+      "hours": "א-ה: 09:00-18:00, יום ו': 09:00-13:30",
+      "source": "wizo",
+      "sourceUrl": "https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA&wpv_aux_current_post_id=4049&wpv_aux_parent_post_id=4049&wpv_view_count=387-TCPID4049"
+    }
+  ]
+}

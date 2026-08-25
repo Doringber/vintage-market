@@ -80,3 +80,22 @@ the live site, then restart / redeploy.
 
 Prices are loaded from the catalog on the server, not trusted from the browser.
 Shipping is ₪35, or free over ₪350.
+
+## Map page — second-hand places
+
+Route: `/map` (מפת יד שנייה)
+
+**WIZO ביגודיות:** 45 shops from [wizo.org.il](https://wizo.org.il/institution/?wpv-type-of-institution%5B%5D=%D7%91%D7%99%D7%92%D7%95%D7%93%D7%99%D7%95%D7%AA).
+
+**Curated sources:** Pitchon Lev bins, Dandasha branches, Better Be Second (צ'לסי, אדרת), and local guides linked to Kan 11.
+
+Refresh all map data:
+
+```bash
+npm run sync:places
+```
+
+To add your own pins via Supabase, run `supabase/second_hand_places.sql` in the
+SQL Editor, then add rows in Table Editor.
+
+Fields: `slug`, `name`, `place_type` (`sell` | `give` | `both`), `categories` (array), `address`, `city`, `lat`, `lng`, `description`, optional `phone` / `hours`, `is_active`.

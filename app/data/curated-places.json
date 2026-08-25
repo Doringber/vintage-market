@@ -1,0 +1,851 @@
+{
+  "syncedAt": "2026-08-25T19:57:34.218Z",
+  "sources": {
+    "pitchonlev": "https://www.pitchonlev.org.il/second-hand-clothes/",
+    "dandasha": "https://dandasha.co.il/pages/branches",
+    "betterbesecond": "https://www.betterbesecond.com/post/%D7%9C%D7%A7%D7%91%D7%9C-%D7%9B%D7%A1%D7%A3-%D7%A2%D7%9C-%D7%94%D7%91%D7%92%D7%93%D7%99%D7%9D-%D7%A9%D7%9C%D7%99",
+    "kan": "https://www.kan.org.il/content/kan-news/local/269807/"
+  },
+  "count": 51,
+  "places": [
+    {
+      "slug": "pitchonlev-bin-אשדוד-אשדוד-צפון,-רח-המדע-35,-א.ת.-צפוני",
+      "name": "איסוף בגדים פתחון לב — אשדוד",
+      "placeType": "give",
+      "categories": [
+        "clothes"
+      ],
+      "address": "אשדוד צפון, רח' המדע 35, א.ת. צפוני",
+      "city": "אשדוד",
+      "description": "מכולת איסוף בגדים של פתחון לב (פרויקט סונול). הבגדים ממוינים ומועברים לנזקקים.",
+      "hours": "24/7 — מכולה בתחנת דלק",
+      "source": "pitchonlev",
+      "sourceUrl": "https://www.pitchonlev.org.il/second-hand-clothes/",
+      "lat": 31.804,
+      "lng": 34.655
+    },
+    {
+      "slug": "dandasha-dandasha-beer-sheva",
+      "name": "דנדשה — באר שבע",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "התקווה 10",
+      "city": "באר שבע",
+      "description": "רשת בגדי יד שנייה חברתית. על כל 10 פריטים שמוסרים — זיכוי/הנחה לרכישה בחנות.",
+      "phone": "*2559 שלוחה 3",
+      "hours": "א'-ה' 09:00-19:00",
+      "source": "dandasha",
+      "sourceUrl": "https://dandasha.co.il/pages/branches",
+      "lat": 31.245,
+      "lng": 34.792
+    },
+    {
+      "slug": "pitchonlev-bin-חולון-המרכבה-35,-א.ת.-—-תחנת-המרכבה",
+      "name": "איסוף בגדים פתחון לב — חולון",
+      "placeType": "give",
+      "categories": [
+        "clothes"
+      ],
+      "address": "המרכבה 35, א.ת. — תחנת המרכבה",
+      "city": "חולון",
+      "description": "מכולת איסוף בגדים של פתחון לב (פרויקט סונול). הבגדים ממוינים ומועברים לנזקקים.",
+      "hours": "24/7 — מכולה בתחנת דלק",
+      "source": "pitchonlev",
+      "sourceUrl": "https://www.pitchonlev.org.il/second-hand-clothes/",
+      "lat": 32.011,
+      "lng": 34.779
+    },
+    {
+      "slug": "kan-boutique-gurion",
+      "name": "בוטיק גוריון",
+      "placeType": "both",
+      "categories": [
+        "clothes",
+        "toys",
+        "general"
+      ],
+      "address": "קרסל 6, מרכז קהילתי בן גוריון",
+      "city": "חולון",
+      "lat": 32.0178,
+      "lng": 34.7792,
+      "description": "חנות יד שנייה חברתית — בגדים, צעצועים וכלי בית. מקור: מדריכי תרומה מקומיים (כאן 11 חסום לסריקה).",
+      "phone": "03-5528490",
+      "hours": "עדכון בשעות בפייסבוק boutique_gurion",
+      "source": "kan",
+      "sourceUrl": "https://www.kan.org.il/content/kan-news/local/269807/"
+    },
+    {
+      "slug": "pitchonlev-bin-חורפיש-א.ת.-—-תחנת-חורפיש",
+      "name": "איסוף בגדים פתחון לב — חורפיש",
+      "placeType": "give",
+      "categories": [
+        "clothes"
+      ],
+      "address": "א.ת. — תחנת חורפיש",
+      "city": "חורפיש",
+      "description": "מכולת איסוף בגדים של פתחון לב (פרויקט סונול). הבגדים ממוינים ומועברים לנזקקים.",
+      "hours": "24/7 — מכולה בתחנת דלק",
+      "source": "pitchonlev",
+      "sourceUrl": "https://www.pitchonlev.org.il/second-hand-clothes/",
+      "lat": 33.017,
+      "lng": 35.348
+    },
+    {
+      "slug": "pitchonlev-bin-חיפה-אופיר-צק-פוסט",
+      "name": "איסוף בגדים פתחון לב — חיפה",
+      "placeType": "give",
+      "categories": [
+        "clothes"
+      ],
+      "address": "אופיר צ'ק פוסט",
+      "city": "חיפה",
+      "description": "מכולת איסוף בגדים של פתחון לב (פרויקט סונול). הבגדים ממוינים ומועברים לנזקקים.",
+      "hours": "24/7 — מכולה בתחנת דלק",
+      "source": "pitchonlev",
+      "sourceUrl": "https://www.pitchonlev.org.il/second-hand-clothes/",
+      "lat": 32.794,
+      "lng": 34.9896
+    },
+    {
+      "slug": "dandasha-dandasha-haifa",
+      "name": "דנדשה — חיפה",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "דרך יפו 24",
+      "city": "חיפה",
+      "description": "רשת בגדי יד שנייה חברתית. על כל 10 פריטים שמוסרים — זיכוי/הנחה לרכישה בחנות.",
+      "phone": "*2559 שלוחה 3",
+      "hours": "א'-ה' 09:00-19:00",
+      "source": "dandasha",
+      "sourceUrl": "https://dandasha.co.il/pages/branches",
+      "lat": 32.819,
+      "lng": 34.998
+    },
+    {
+      "slug": "dandasha-dandasha-haifa-low",
+      "name": "דנדשה — חיפה",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "שדרות ההסתדרות 251",
+      "city": "חיפה",
+      "description": "רשת בגדי יד שנייה חברתית. על כל 10 פריטים שמוסרים — זיכוי/הנחה לרכישה בחנות.",
+      "phone": "*2559 שלוחה 3",
+      "hours": "א'-ה' 09:00-19:00",
+      "source": "dandasha",
+      "sourceUrl": "https://dandasha.co.il/pages/branches",
+      "lat": 32.789,
+      "lng": 35.034
+    },
+    {
+      "slug": "pitchonlev-bin-טבריה-צומת-אלומות,-פוריה-עין-הגליל",
+      "name": "איסוף בגדים פתחון לב — טבריה",
+      "placeType": "give",
+      "categories": [
+        "clothes"
+      ],
+      "address": "צומת אלומות, פוריה עין הגליל",
+      "city": "טבריה",
+      "description": "מכולת איסוף בגדים של פתחון לב (פרויקט סונול). הבגדים ממוינים ומועברים לנזקקים.",
+      "hours": "24/7 — מכולה בתחנת דלק",
+      "source": "pitchonlev",
+      "sourceUrl": "https://www.pitchonlev.org.il/second-hand-clothes/",
+      "lat": 32.792,
+      "lng": 35.531
+    },
+    {
+      "slug": "pitchonlev-bin-יפיע-יפיע",
+      "name": "איסוף בגדים פתחון לב — יפיע",
+      "placeType": "give",
+      "categories": [
+        "clothes"
+      ],
+      "address": "יפיע",
+      "city": "יפיע",
+      "description": "מכולת איסוף בגדים של פתחון לב (פרויקט סונול). הבגדים ממוינים ומועברים לנזקקים.",
+      "hours": "24/7 — מכולה בתחנת דלק",
+      "source": "pitchonlev",
+      "sourceUrl": "https://www.pitchonlev.org.il/second-hand-clothes/",
+      "lat": 32.684,
+      "lng": 35.275
+    },
+    {
+      "slug": "kan-hamezion-jlm",
+      "name": "המציאון — ירושלים",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "פייר קניג 39, תלפיות",
+      "city": "ירושלים",
+      "lat": 31.7512,
+      "lng": 35.2134,
+      "description": "סניף ירושלים — תרומת ורכישת בגדי יד שנייה. מקור: מדריכי תרומה מקומיים (כאן 11 חסום לסריקה).",
+      "phone": "02-6247993",
+      "hours": "א'-ה' 10:00-20:00, ו' 9:00-14:00",
+      "source": "kan",
+      "sourceUrl": "https://www.kan.org.il/content/kan-news/local/269807/"
+    },
+    {
+      "slug": "pitchonlev-bin-ירכא-כפר-ירכא",
+      "name": "איסוף בגדים פתחון לב — ירכא",
+      "placeType": "give",
+      "categories": [
+        "clothes"
+      ],
+      "address": "כפר ירכא",
+      "city": "ירכא",
+      "description": "מכולת איסוף בגדים של פתחון לב (פרויקט סונול). הבגדים ממוינים ומועברים לנזקקים.",
+      "hours": "24/7 — מכולה בתחנת דלק",
+      "source": "pitchonlev",
+      "sourceUrl": "https://www.pitchonlev.org.il/second-hand-clothes/",
+      "lat": 32.954,
+      "lng": 35.212
+    },
+    {
+      "slug": "pitchonlev-bin-כבול-כפר-כבול",
+      "name": "איסוף בגדים פתחון לב — כבול",
+      "placeType": "give",
+      "categories": [
+        "clothes"
+      ],
+      "address": "כפר כבול",
+      "city": "כבול",
+      "description": "מכולת איסוף בגדים של פתחון לב (פרויקט סונול). הבגדים ממוינים ומועברים לנזקקים.",
+      "hours": "24/7 — מכולה בתחנת דלק",
+      "source": "pitchonlev",
+      "sourceUrl": "https://www.pitchonlev.org.il/second-hand-clothes/",
+      "lat": 32.95,
+      "lng": 35.2
+    },
+    {
+      "slug": "pitchonlev-bin-כפר-סבא-רח-מנחם-בגין-—-תחנת-כפר-סבא-צפון",
+      "name": "איסוף בגדים פתחון לב — כפר סבא",
+      "placeType": "give",
+      "categories": [
+        "clothes"
+      ],
+      "address": "רח' מנחם בגין — תחנת כפר סבא צפון",
+      "city": "כפר סבא",
+      "description": "מכולת איסוף בגדים של פתחון לב (פרויקט סונול). הבגדים ממוינים ומועברים לנזקקים.",
+      "hours": "24/7 — מכולה בתחנת דלק",
+      "source": "pitchonlev",
+      "sourceUrl": "https://www.pitchonlev.org.il/second-hand-clothes/",
+      "lat": 32.178,
+      "lng": 34.907
+    },
+    {
+      "slug": "pitchonlev-bin-כפר-סבא-כפר-סבא-מזרח",
+      "name": "איסוף בגדים פתחון לב — כפר סבא",
+      "placeType": "give",
+      "categories": [
+        "clothes"
+      ],
+      "address": "כפר סבא מזרח",
+      "city": "כפר סבא",
+      "description": "מכולת איסוף בגדים של פתחון לב (פרויקט סונול). הבגדים ממוינים ומועברים לנזקקים.",
+      "hours": "24/7 — מכולה בתחנת דלק",
+      "source": "pitchonlev",
+      "sourceUrl": "https://www.pitchonlev.org.il/second-hand-clothes/",
+      "lat": 32.178,
+      "lng": 34.907
+    },
+    {
+      "slug": "dandasha-dandasha-kfar-saba",
+      "name": "דנדשה — כפר סבא",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "ויצמן 24",
+      "city": "כפר סבא",
+      "description": "רשת בגדי יד שנייה חברתית. על כל 10 פריטים שמוסרים — זיכוי/הנחה לרכישה בחנות.",
+      "phone": "*2559 שלוחה 3",
+      "hours": "א'-ה' 09:00-19:00",
+      "source": "dandasha",
+      "sourceUrl": "https://dandasha.co.il/pages/branches",
+      "lat": 32.178,
+      "lng": 34.907
+    },
+    {
+      "slug": "pitchonlev-bin-כפר-תבור-תחנת-סונול-כוכב-התבור",
+      "name": "איסוף בגדים פתחון לב — כפר תבור",
+      "placeType": "give",
+      "categories": [
+        "clothes"
+      ],
+      "address": "תחנת סונול כוכב התבור",
+      "city": "כפר תבור",
+      "description": "מכולת איסוף בגדים של פתחון לב (פרויקט סונול). הבגדים ממוינים ומועברים לנזקקים.",
+      "hours": "24/7 — מכולה בתחנת דלק",
+      "source": "pitchonlev",
+      "sourceUrl": "https://www.pitchonlev.org.il/second-hand-clothes/",
+      "lat": 32.721,
+      "lng": 35.421
+    },
+    {
+      "slug": "pitchonlev-center-carmiel",
+      "name": "מרכז סיוע פתחון לב — כרמיאל",
+      "placeType": "give",
+      "categories": [
+        "clothes",
+        "toys",
+        "general"
+      ],
+      "address": "רחוב לבונה 1, א.ת.",
+      "city": "כרמיאל",
+      "description": "מרכז סיוע של פתחון לב — תרומת בגדים, צעצועים וכלי בית.",
+      "phone": "04-9985661",
+      "hours": "א'-ה' 8:00-17:00",
+      "source": "pitchonlev",
+      "sourceUrl": "https://www.pitchonlev.org.il/second-hand-clothes/",
+      "lat": 32.919,
+      "lng": 35.303
+    },
+    {
+      "slug": "pitchonlev-bin-כרמיאל-תחנת-סונול-בכביש-עכו-צפת",
+      "name": "איסוף בגדים פתחון לב — כרמיאל",
+      "placeType": "give",
+      "categories": [
+        "clothes"
+      ],
+      "address": "תחנת סונול בכביש עכו-צפת",
+      "city": "כרמיאל",
+      "description": "מכולת איסוף בגדים של פתחון לב (פרויקט סונול). הבגדים ממוינים ומועברים לנזקקים.",
+      "hours": "24/7 — מכולה בתחנת דלק",
+      "source": "pitchonlev",
+      "sourceUrl": "https://www.pitchonlev.org.il/second-hand-clothes/",
+      "lat": 32.919,
+      "lng": 35.303
+    },
+    {
+      "slug": "pitchonlev-bin-כרמיאל-רח-החרושת-40,-א.ת.",
+      "name": "איסוף בגדים פתחון לב — כרמיאל",
+      "placeType": "give",
+      "categories": [
+        "clothes"
+      ],
+      "address": "רח' החרושת 40, א.ת.",
+      "city": "כרמיאל",
+      "description": "מכולת איסוף בגדים של פתחון לב (פרויקט סונול). הבגדים ממוינים ומועברים לנזקקים.",
+      "hours": "24/7 — מכולה בתחנת דלק",
+      "source": "pitchonlev",
+      "sourceUrl": "https://www.pitchonlev.org.il/second-hand-clothes/",
+      "lat": 32.919,
+      "lng": 35.303
+    },
+    {
+      "slug": "pitchonlev-bin-כרמיאל-כביש-85,-אזור-כרמיאל",
+      "name": "איסוף בגדים פתחון לב — כרמיאל",
+      "placeType": "give",
+      "categories": [
+        "clothes"
+      ],
+      "address": "כביש 85, אזור כרמיאל",
+      "city": "כרמיאל",
+      "description": "מכולת איסוף בגדים של פתחון לב (פרויקט סונול). הבגדים ממוינים ומועברים לנזקקים.",
+      "hours": "24/7 — מכולה בתחנת דלק",
+      "source": "pitchonlev",
+      "sourceUrl": "https://www.pitchonlev.org.il/second-hand-clothes/",
+      "lat": 32.919,
+      "lng": 35.303
+    },
+    {
+      "slug": "pitchonlev-bin-מגדל-העמק-תחנת-מגדל-העמק,-רח-הקישון",
+      "name": "איסוף בגדים פתחון לב — מגדל העמק",
+      "placeType": "give",
+      "categories": [
+        "clothes"
+      ],
+      "address": "תחנת מגדל העמק, רח' הקישון",
+      "city": "מגדל העמק",
+      "description": "מכולת איסוף בגדים של פתחון לב (פרויקט סונול). הבגדים ממוינים ומועברים לנזקקים.",
+      "hours": "24/7 — מכולה בתחנת דלק",
+      "source": "pitchonlev",
+      "sourceUrl": "https://www.pitchonlev.org.il/second-hand-clothes/",
+      "lat": 32.676,
+      "lng": 35.242
+    },
+    {
+      "slug": "pitchonlev-bin-משמר-הירדן-משמר-הירדן",
+      "name": "איסוף בגדים פתחון לב — משמר הירדן",
+      "placeType": "give",
+      "categories": [
+        "clothes"
+      ],
+      "address": "משמר הירדן",
+      "city": "משמר הירדן",
+      "description": "מכולת איסוף בגדים של פתחון לב (פרויקט סונול). הבגדים ממוינים ומועברים לנזקקים.",
+      "hours": "24/7 — מכולה בתחנת דלק",
+      "source": "pitchonlev",
+      "sourceUrl": "https://www.pitchonlev.org.il/second-hand-clothes/",
+      "lat": 33.1,
+      "lng": 35.65
+    },
+    {
+      "slug": "pitchonlev-bin-נהריה-תחנת-סונול-נהריה,-רח-שזר",
+      "name": "איסוף בגדים פתחון לב — נהריה",
+      "placeType": "give",
+      "categories": [
+        "clothes"
+      ],
+      "address": "תחנת סונול נהריה, רח' שז\"ר",
+      "city": "נהריה",
+      "description": "מכולת איסוף בגדים של פתחון לב (פרויקט סונול). הבגדים ממוינים ומועברים לנזקקים.",
+      "hours": "24/7 — מכולה בתחנת דלק",
+      "source": "pitchonlev",
+      "sourceUrl": "https://www.pitchonlev.org.il/second-hand-clothes/",
+      "lat": 33.008,
+      "lng": 35.098
+    },
+    {
+      "slug": "pitchonlev-bin-נצרת-כביש-נצרת-ציפורי,-מבואות-נצרת",
+      "name": "איסוף בגדים פתחון לב — נצרת",
+      "placeType": "give",
+      "categories": [
+        "clothes"
+      ],
+      "address": "כביש נצרת-ציפורי, מבואות נצרת",
+      "city": "נצרת",
+      "description": "מכולת איסוף בגדים של פתחון לב (פרויקט סונול). הבגדים ממוינים ומועברים לנזקקים.",
+      "hours": "24/7 — מכולה בתחנת דלק",
+      "source": "pitchonlev",
+      "sourceUrl": "https://www.pitchonlev.org.il/second-hand-clothes/",
+      "lat": 32.699,
+      "lng": 35.303
+    },
+    {
+      "slug": "pitchonlev-bin-נתניה-צומת-השרון",
+      "name": "איסוף בגדים פתחון לב — נתניה",
+      "placeType": "give",
+      "categories": [
+        "clothes"
+      ],
+      "address": "צומת השרון",
+      "city": "נתניה",
+      "description": "מכולת איסוף בגדים של פתחון לב (פרויקט סונול). הבגדים ממוינים ומועברים לנזקקים.",
+      "hours": "24/7 — מכולה בתחנת דלק",
+      "source": "pitchonlev",
+      "sourceUrl": "https://www.pitchonlev.org.il/second-hand-clothes/",
+      "lat": 32.3215,
+      "lng": 34.8532
+    },
+    {
+      "slug": "dandasha-dandasha-netanya",
+      "name": "דנדשה — נתניה",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "הרצל 27",
+      "city": "נתניה",
+      "description": "רשת בגדי יד שנייה חברתית. על כל 10 פריטים שמוסרים — זיכוי/הנחה לרכישה בחנות.",
+      "phone": "*2559 שלוחה 3",
+      "hours": "א'-ה' 09:00-19:00",
+      "source": "dandasha",
+      "sourceUrl": "https://dandasha.co.il/pages/branches",
+      "lat": 32.328,
+      "lng": 34.856
+    },
+    {
+      "slug": "pitchonlev-bin-סתריה-סתריה",
+      "name": "איסוף בגדים פתחון לב — סתריה",
+      "placeType": "give",
+      "categories": [
+        "clothes"
+      ],
+      "address": "סתריה",
+      "city": "סתריה",
+      "description": "מכולת איסוף בגדים של פתחון לב (פרויקט סונול). הבגדים ממוינים ומועברים לנזקקים.",
+      "hours": "24/7 — מכולה בתחנת דלק",
+      "source": "pitchonlev",
+      "sourceUrl": "https://www.pitchonlev.org.il/second-hand-clothes/",
+      "lat": 31.883,
+      "lng": 34.867
+    },
+    {
+      "slug": "pitchonlev-bin-עפולה-מפגש-העמק",
+      "name": "איסוף בגדים פתחון לב — עפולה",
+      "placeType": "give",
+      "categories": [
+        "clothes"
+      ],
+      "address": "מפגש העמק",
+      "city": "עפולה",
+      "description": "מכולת איסוף בגדים של פתחון לב (פרויקט סונול). הבגדים ממוינים ומועברים לנזקקים.",
+      "hours": "24/7 — מכולה בתחנת דלק",
+      "source": "pitchonlev",
+      "sourceUrl": "https://www.pitchonlev.org.il/second-hand-clothes/",
+      "lat": 32.607,
+      "lng": 35.289
+    },
+    {
+      "slug": "pitchonlev-bin-עפולה-עפולה",
+      "name": "איסוף בגדים פתחון לב — עפולה",
+      "placeType": "give",
+      "categories": [
+        "clothes"
+      ],
+      "address": "עפולה",
+      "city": "עפולה",
+      "description": "מכולת איסוף בגדים של פתחון לב (פרויקט סונול). הבגדים ממוינים ומועברים לנזקקים.",
+      "hours": "24/7 — מכולה בתחנת דלק",
+      "source": "pitchonlev",
+      "sourceUrl": "https://www.pitchonlev.org.il/second-hand-clothes/",
+      "lat": 32.607,
+      "lng": 35.289
+    },
+    {
+      "slug": "dandasha-dandasha-afula",
+      "name": "דנדשה — עפולה",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "הרב נחום לוין 2",
+      "city": "עפולה",
+      "description": "רשת בגדי יד שנייה חברתית. על כל 10 פריטים שמוסרים — זיכוי/הנחה לרכישה בחנות.",
+      "phone": "*2559 שלוחה 3",
+      "hours": "א'-ה' 09:00-19:00",
+      "source": "dandasha",
+      "sourceUrl": "https://dandasha.co.il/pages/branches",
+      "lat": 32.607,
+      "lng": 35.289
+    },
+    {
+      "slug": "pitchonlev-bin-צריפין-תחנת-שלמה",
+      "name": "איסוף בגדים פתחון לב — צריפין",
+      "placeType": "give",
+      "categories": [
+        "clothes"
+      ],
+      "address": "תחנת שלמה",
+      "city": "צריפין",
+      "description": "מכולת איסוף בגדים של פתחון לב (פרויקט סונול). הבגדים ממוינים ומועברים לנזקקים.",
+      "hours": "24/7 — מכולה בתחנת דלק",
+      "source": "pitchonlev",
+      "sourceUrl": "https://www.pitchonlev.org.il/second-hand-clothes/",
+      "lat": 31.967,
+      "lng": 34.837
+    },
+    {
+      "slug": "pitchonlev-bin-קרית-אתא-תחנת-סונול-מבואות-אתא,-רח-העצמאות",
+      "name": "איסוף בגדים פתחון לב — קרית אתא",
+      "placeType": "give",
+      "categories": [
+        "clothes"
+      ],
+      "address": "תחנת סונול מבואות אתא, רח' העצמאות",
+      "city": "קרית אתא",
+      "description": "מכולת איסוף בגדים של פתחון לב (פרויקט סונול). הבגדים ממוינים ומועברים לנזקקים.",
+      "hours": "24/7 — מכולה בתחנת דלק",
+      "source": "pitchonlev",
+      "sourceUrl": "https://www.pitchonlev.org.il/second-hand-clothes/",
+      "lat": 32.804,
+      "lng": 35.106
+    },
+    {
+      "slug": "pitchonlev-bin-קרית-אתא-תחנת-סונול,-כביש-קרית-ביאליק",
+      "name": "איסוף בגדים פתחון לב — קרית אתא",
+      "placeType": "give",
+      "categories": [
+        "clothes"
+      ],
+      "address": "תחנת סונול, כביש קרית ביאליק",
+      "city": "קרית אתא",
+      "description": "מכולת איסוף בגדים של פתחון לב (פרויקט סונול). הבגדים ממוינים ומועברים לנזקקים.",
+      "hours": "24/7 — מכולה בתחנת דלק",
+      "source": "pitchonlev",
+      "sourceUrl": "https://www.pitchonlev.org.il/second-hand-clothes/",
+      "lat": 32.804,
+      "lng": 35.106
+    },
+    {
+      "slug": "dandasha-dandasha-kiryat-gat",
+      "name": "דנדשה — קרית גת",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "דרך הדרום 9",
+      "city": "קרית גת",
+      "description": "רשת בגדי יד שנייה חברתית. על כל 10 פריטים שמוסרים — זיכוי/הנחה לרכישה בחנות.",
+      "phone": "*2559 שלוחה 3",
+      "hours": "א'-ה' 09:00-19:00",
+      "source": "dandasha",
+      "sourceUrl": "https://dandasha.co.il/pages/branches",
+      "lat": 31.61,
+      "lng": 34.771
+    },
+    {
+      "slug": "pitchonlev-bin-קרית-חיים-קרית-חיים,-ליד-האצטדיון",
+      "name": "איסוף בגדים פתחון לב — קרית חיים",
+      "placeType": "give",
+      "categories": [
+        "clothes"
+      ],
+      "address": "קרית חיים, ליד האצטדיון",
+      "city": "קרית חיים",
+      "description": "מכולת איסוף בגדים של פתחון לב (פרויקט סונול). הבגדים ממוינים ומועברים לנזקקים.",
+      "hours": "24/7 — מכולה בתחנת דלק",
+      "source": "pitchonlev",
+      "sourceUrl": "https://www.pitchonlev.org.il/second-hand-clothes/",
+      "lat": 32.833,
+      "lng": 35.067
+    },
+    {
+      "slug": "dandasha-dandasha-kiryat-motzkin",
+      "name": "דנדשה — קרית מוצקין",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "שדרות גושן 29",
+      "city": "קרית מוצקין",
+      "description": "רשת בגדי יד שנייה חברתית. על כל 10 פריטים שמוסרים — זיכוי/הנחה לרכישה בחנות.",
+      "phone": "*2559 שלוחה 3",
+      "hours": "א'-ה' 09:00-19:00",
+      "source": "dandasha",
+      "sourceUrl": "https://dandasha.co.il/pages/branches",
+      "lat": 32.833,
+      "lng": 35.077
+    },
+    {
+      "slug": "pitchonlev-bin-ראש-פינה-ראש-פינה",
+      "name": "איסוף בגדים פתחון לב — ראש פינה",
+      "placeType": "give",
+      "categories": [
+        "clothes"
+      ],
+      "address": "ראש פינה",
+      "city": "ראש פינה",
+      "description": "מכולת איסוף בגדים של פתחון לב (פרויקט סונול). הבגדים ממוינים ומועברים לנזקקים.",
+      "hours": "24/7 — מכולה בתחנת דלק",
+      "source": "pitchonlev",
+      "sourceUrl": "https://www.pitchonlev.org.il/second-hand-clothes/",
+      "lat": 32.481,
+      "lng": 35.542
+    },
+    {
+      "slug": "pitchonlev-center-rishon",
+      "name": "מרכז סיוע פתחון לב — ראשון לציון",
+      "placeType": "give",
+      "categories": [
+        "clothes",
+        "toys",
+        "general"
+      ],
+      "address": "רחוב לישנסקי 9",
+      "city": "ראשון לציון",
+      "description": "מרכז סיוע של פתחון לב — תרומת בגדים, צעצועים וכלי בית.",
+      "phone": "03-9512755",
+      "hours": "א'-ה' 9:00-17:00",
+      "source": "pitchonlev",
+      "sourceUrl": "https://www.pitchonlev.org.il/second-hand-clothes/",
+      "lat": 31.987,
+      "lng": 34.769
+    },
+    {
+      "slug": "pitchonlev-bin-ראשון-לציון-רח-האצל-22,-א.ת.-—-תחנת-סונול",
+      "name": "איסוף בגדים פתחון לב — ראשון לציון",
+      "placeType": "give",
+      "categories": [
+        "clothes"
+      ],
+      "address": "רח' האצ\"ל 22, א.ת. — תחנת סונול",
+      "city": "ראשון לציון",
+      "description": "מכולת איסוף בגדים של פתחון לב (פרויקט סונול). הבגדים ממוינים ומועברים לנזקקים.",
+      "hours": "24/7 — מכולה בתחנת דלק",
+      "source": "pitchonlev",
+      "sourceUrl": "https://www.pitchonlev.org.il/second-hand-clothes/",
+      "lat": 31.973,
+      "lng": 34.7925
+    },
+    {
+      "slug": "pitchonlev-bin-ראשון-לציון-כביש-נס-ציונה-ראשלצ-—-תחנת-סונול-עטר",
+      "name": "איסוף בגדים פתחון לב — ראשון לציון",
+      "placeType": "give",
+      "categories": [
+        "clothes"
+      ],
+      "address": "כביש נס ציונה-ראשל\"צ — תחנת סונול עטרת",
+      "city": "ראשון לציון",
+      "description": "מכולת איסוף בגדים של פתחון לב (פרויקט סונול). הבגדים ממוינים ומועברים לנזקקים.",
+      "hours": "24/7 — מכולה בתחנת דלק",
+      "source": "pitchonlev",
+      "sourceUrl": "https://www.pitchonlev.org.il/second-hand-clothes/",
+      "lat": 31.973,
+      "lng": 34.7925
+    },
+    {
+      "slug": "pitchonlev-bin-ראשון-לציון-רח-רוזנסקי-2-—-תחנת-עמי",
+      "name": "איסוף בגדים פתחון לב — ראשון לציון",
+      "placeType": "give",
+      "categories": [
+        "clothes"
+      ],
+      "address": "רח' רוזנסקי 2 — תחנת עמי",
+      "city": "ראשון לציון",
+      "description": "מכולת איסוף בגדים של פתחון לב (פרויקט סונול). הבגדים ממוינים ומועברים לנזקקים.",
+      "hours": "24/7 — מכולה בתחנת דלק",
+      "source": "pitchonlev",
+      "sourceUrl": "https://www.pitchonlev.org.il/second-hand-clothes/",
+      "lat": 31.973,
+      "lng": 34.7925
+    },
+    {
+      "slug": "dandasha-dandasha-rishon",
+      "name": "דנדשה — ראשון לציון",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "רוטשילד 56",
+      "city": "ראשון לציון",
+      "description": "רשת בגדי יד שנייה חברתית. על כל 10 פריטים שמוסרים — זיכוי/הנחה לרכישה בחנות.",
+      "phone": "*2559 שלוחה 3",
+      "hours": "א'-ה' 09:00-19:00",
+      "source": "dandasha",
+      "sourceUrl": "https://dandasha.co.il/pages/branches",
+      "lat": 31.973,
+      "lng": 34.7925
+    },
+    {
+      "slug": "pitchonlev-bin-רחובות-פארק-המדע,-רח-המדע",
+      "name": "איסוף בגדים פתחון לב — רחובות",
+      "placeType": "give",
+      "categories": [
+        "clothes"
+      ],
+      "address": "פארק המדע, רח' המדע",
+      "city": "רחובות",
+      "description": "מכולת איסוף בגדים של פתחון לב (פרויקט סונול). הבגדים ממוינים ומועברים לנזקקים.",
+      "hours": "24/7 — מכולה בתחנת דלק",
+      "source": "pitchonlev",
+      "sourceUrl": "https://www.pitchonlev.org.il/second-hand-clothes/",
+      "lat": 31.892,
+      "lng": 34.811
+    },
+    {
+      "slug": "dandasha-dandasha-ramat-gan",
+      "name": "דנדשה — רמת גן",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "ביאליק 27",
+      "city": "רמת גן",
+      "description": "רשת בגדי יד שנייה חברתית. על כל 10 פריטים שמוסרים — זיכוי/הנחה לרכישה בחנות.",
+      "phone": "*2559 שלוחה 3",
+      "hours": "א'-ה' 09:00-19:00",
+      "source": "dandasha",
+      "sourceUrl": "https://dandasha.co.il/pages/branches",
+      "lat": 32.082,
+      "lng": 34.814
+    },
+    {
+      "slug": "dandasha-dandasha-tlv-hiram",
+      "name": "דנדשה — תל אביב",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "המלך חירם 8",
+      "city": "תל אביב",
+      "description": "רשת בגדי יד שנייה חברתית. על כל 10 פריטים שמוסרים — זיכוי/הנחה לרכישה בחנות.",
+      "phone": "*2559 שלוחה 3",
+      "hours": "א'-ה' 09:00-19:00",
+      "source": "dandasha",
+      "sourceUrl": "https://dandasha.co.il/pages/branches",
+      "lat": 32.053,
+      "lng": 34.752
+    },
+    {
+      "slug": "dandasha-dandasha-tlv-dizengoff",
+      "name": "דנדשה — תל אביב",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "דיזנגוף 91",
+      "city": "תל אביב",
+      "description": "רשת בגדי יד שנייה חברתית. על כל 10 פריטים שמוסרים — זיכוי/הנחה לרכישה בחנות.",
+      "phone": "*2559 שלוחה 3",
+      "hours": "א'-ה' 10:00-20:00",
+      "source": "dandasha",
+      "sourceUrl": "https://dandasha.co.il/pages/branches",
+      "lat": 32.078,
+      "lng": 34.7749
+    },
+    {
+      "slug": "bbs-chelsea-tlv",
+      "name": "צ'לסי — יד שנייה",
+      "placeType": "sell",
+      "categories": [
+        "clothes"
+      ],
+      "address": "מקווה ישראל 22",
+      "city": "תל אביב",
+      "lat": 32.0665,
+      "lng": 34.7867,
+      "description": "חנות יד שנייה במתחם גן החשמל. מקבלת עד 10 פריטים בתיאום מראש — זיכוי לרכישה בחנות. מקור: Better Be Second.",
+      "hours": "יש לתאם באפליקציה",
+      "source": "betterbesecond",
+      "sourceUrl": "https://www.betterbesecond.com/post/%D7%9C%D7%A7%D7%91%D7%9C-%D7%9B%D7%A1%D7%A3-%D7%A2%D7%9C-%D7%94%D7%91%D7%92%D7%93%D7%99%D7%9D-%D7%A9%D7%9C%D7%99"
+    },
+    {
+      "slug": "bbs-adret-tlv",
+      "name": "אדרת — וינטג'",
+      "placeType": "sell",
+      "categories": [
+        "clothes"
+      ],
+      "address": "בוגרשוב 53",
+      "city": "תל אביב",
+      "lat": 32.0778,
+      "lng": 34.7712,
+      "description": "וינטג' משנות ה-90 ומטה. מזומן 25% או זיכוי 35% — בתיאום מראש. מקור: Better Be Second.",
+      "hours": "בתיאום מראש",
+      "source": "betterbesecond",
+      "sourceUrl": "https://www.betterbesecond.com/post/%D7%9C%D7%A7%D7%91%D7%9C-%D7%9B%D7%A1%D7%A3-%D7%A2%D7%9C-%D7%94%D7%91%D7%92%D7%93%D7%99%D7%9D-%D7%A9%D7%9C%D7%99"
+    },
+    {
+      "slug": "kan-hamezion-tlv",
+      "name": "המציאון — תל אביב",
+      "placeType": "both",
+      "categories": [
+        "clothes"
+      ],
+      "address": "דיזנגוף סנטר, בניין B, קומה 3",
+      "city": "תל אביב",
+      "lat": 32.0753,
+      "lng": 34.7749,
+      "description": "רשת חנויות וינטג' ויד שנייה. ניתן לתרום בגדים. מקור: מדריכי תרומה מקומיים (כאן 11 חסום לסריקה).",
+      "phone": "02-6247993",
+      "hours": "א'-ה' 10:00-20:00, ו' 10:00-15:00",
+      "source": "kan",
+      "sourceUrl": "https://www.kan.org.il/content/kan-news/local/269807/"
+    },
+    {
+      "slug": "pitchonlev-bin-תמרה-מפגש-תמרה",
+      "name": "איסוף בגדים פתחון לב — תמרה",
+      "placeType": "give",
+      "categories": [
+        "clothes"
+      ],
+      "address": "מפגש תמרה",
+      "city": "תמרה",
+      "description": "מכולת איסוף בגדים של פתחון לב (פרויקט סונול). הבגדים ממוינים ומועברים לנזקקים.",
+      "hours": "24/7 — מכולה בתחנת דלק",
+      "source": "pitchonlev",
+      "sourceUrl": "https://www.pitchonlev.org.il/second-hand-clothes/",
+      "lat": 32.637,
+      "lng": 35.208
+    }
+  ]
+}
